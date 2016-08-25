@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVj-zj-E5C">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onM-Yi-ZiJ">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="fbY-nY-ISR"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="18" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Back"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="QKF-gc-7zc"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSHVIEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIg-Y4-YiB">
+                            <rect key="frame" x="46" y="27" width="228" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.23445804149999999" green="0.46280869270000002" blue="0.8155248397" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="onM-Yi-ZiJ" secondAttribute="bottom" id="3Tm-RU-n09"/>
+                        <constraint firstItem="onM-Yi-ZiJ" firstAttribute="leading" secondItem="BVj-zj-E5C" secondAttribute="leading" id="BHl-0Z-umX"/>
+                        <constraint firstItem="onM-Yi-ZiJ" firstAttribute="top" secondItem="BVj-zj-E5C" secondAttribute="top" id="Dxj-Vx-633"/>
+                        <constraint firstAttribute="height" constant="60" id="gWq-23-UAW"/>
+                        <constraint firstItem="IIg-Y4-YiB" firstAttribute="leading" secondItem="onM-Yi-ZiJ" secondAttribute="trailing" id="lBn-ww-uCZ"/>
+                        <constraint firstAttribute="bottom" secondItem="IIg-Y4-YiB" secondAttribute="bottom" constant="11" id="psG-xs-Qiv"/>
+                        <constraint firstAttribute="trailing" secondItem="IIg-Y4-YiB" secondAttribute="trailing" constant="46" id="qCe-1c-BLt"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" &lt;— 可由边缘滑动回到上一VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCK-2N-VCc">
+                    <rect key="frame" x="0.0" y="274" width="229" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aCK-2N-VCc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CSj-SE-p84"/>
+                <constraint firstItem="BVj-zj-E5C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EbH-50-rPI"/>
+                <constraint firstItem="aCK-2N-VCc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ebP-QA-AsU"/>
+                <constraint firstAttribute="trailing" secondItem="BVj-zj-E5C" secondAttribute="trailing" id="gC6-sa-6nL"/>
+                <constraint firstItem="BVj-zj-E5C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wuT-dk-Eut"/>
+            </constraints>
+            <point key="canvasLocation" x="301" y="321"/>
+        </view>
+    </objects>
+</document>
