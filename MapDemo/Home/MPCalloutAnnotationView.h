@@ -1,5 +1,5 @@
 //
-//  EPCalloutAnnotationView.h
+//  MPCalloutAnnotationView.h
 //  EasyMeter
 //
 //  Created by guopu on 26/7/16.
@@ -8,7 +8,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface EPAnnotation : NSObject<MKAnnotation>
+@interface MPAnnotation : NSObject<MKAnnotation>
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly, copy) NSString *title;
@@ -28,7 +28,7 @@
 
 @end
 
-@interface EPCalloutAnnotationView : MKAnnotationView
+@interface MPCalloutAnnotationView : MKAnnotationView
 
 +(instancetype)calloutViewWithMapView:(MKMapView *)mapView :(NSString *)key;
 

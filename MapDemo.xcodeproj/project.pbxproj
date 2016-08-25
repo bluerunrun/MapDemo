@@ -32,7 +32,7 @@
 		7AD8AA7C1D6EECFE00F5B7E8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA741D6EECFE00F5B7E8 /* HomeViewController.xib */; };
 		7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA771D6EECFE00F5B7E8 /* PushViewController.m */; };
 		7AD8AA7E1D6EECFE00F5B7E8 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */; };
-		7AD8AA811D6EF1A000F5B7E8 /* EPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA801D6EF1A000F5B7E8 /* EPCalloutAnnotationView.m */; };
+		7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */; };
 		7AD8AA881D6EF29F00F5B7E8 /* MissionRangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA831D6EF29F00F5B7E8 /* MissionRangeCell.m */; };
 		7AD8AA891D6EF29F00F5B7E8 /* MissionRangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA841D6EF29F00F5B7E8 /* MissionRangeCell.xib */; };
 		7AD8AA8A1D6EF29F00F5B7E8 /* MissionRangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA861D6EF29F00F5B7E8 /* MissionRangeView.m */; };
@@ -105,8 +105,8 @@
 		7AD8AA761D6EECFE00F5B7E8 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		7AD8AA771D6EECFE00F5B7E8 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
-		7AD8AA7F1D6EF1A000F5B7E8 /* EPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPCalloutAnnotationView.h; sourceTree = "<group>"; };
-		7AD8AA801D6EF1A000F5B7E8 /* EPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPCalloutAnnotationView.m; sourceTree = "<group>"; };
+		7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalloutAnnotationView.h; sourceTree = "<group>"; };
+		7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
 		7AD8AA821D6EF29F00F5B7E8 /* MissionRangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionRangeCell.h; sourceTree = "<group>"; };
 		7AD8AA831D6EF29F00F5B7E8 /* MissionRangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionRangeCell.m; sourceTree = "<group>"; };
 		7AD8AA841D6EF29F00F5B7E8 /* MissionRangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissionRangeCell.xib; sourceTree = "<group>"; };
@@ -280,8 +280,8 @@
 				7AD8AA851D6EF29F00F5B7E8 /* MissionRangeView.h */,
 				7AD8AA861D6EF29F00F5B7E8 /* MissionRangeView.m */,
 				7AD8AA871D6EF29F00F5B7E8 /* MissionRangeView.xib */,
-				7AD8AA7F1D6EF1A000F5B7E8 /* EPCalloutAnnotationView.h */,
-				7AD8AA801D6EF1A000F5B7E8 /* EPCalloutAnnotationView.m */,
+				7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */,
+				7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */,
 				7AD8AA721D6EECFE00F5B7E8 /* HomeViewController.h */,
 				7AD8AA731D6EECFE00F5B7E8 /* HomeViewController.m */,
 				7AD8AA741D6EECFE00F5B7E8 /* HomeViewController.xib */,
@@ -587,7 +587,7 @@
 				7AD8AA571D6EEBC900F5B7E8 /* MenuCell.m in Sources */,
 				7AD8AA8A1D6EF29F00F5B7E8 /* MissionRangeView.m in Sources */,
 				7AD8AA541D6EEBC900F5B7E8 /* CustomNavigationController.m in Sources */,
-				7AD8AA811D6EF1A000F5B7E8 /* EPCalloutAnnotationView.m in Sources */,
+				7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */,
 				7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */,
 				7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */,
 				7AD8AA561D6EEBC900F5B7E8 /* MainViewController.m in Sources */,

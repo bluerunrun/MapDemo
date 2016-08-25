@@ -1,15 +1,15 @@
 //
-//  EPCalloutAnnotationView.m
+//  MPCalloutAnnotationView.m
 //  EasyMeter
 //
 //  Created by guopu on 26/7/16.
 //  Copyright © 2016年 zxd. All rights reserved.
 //
 
-#import "EPCalloutAnnotationView.h"
+#import "MPCalloutAnnotationView.h"
 #import <Masonry.h>
 
-@implementation EPAnnotation
+@implementation MPAnnotation
 
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
     _coordinate = newCoordinate;
@@ -20,7 +20,7 @@
 #define CalloutView_Width 189
 #define CalloutView_Height 40
 
-@interface EPCalloutAnnotationView()
+@interface MPCalloutAnnotationView()
 
 @property (nonatomic, strong) UIImageView *imgPin;
 
@@ -35,7 +35,7 @@
 
 @end
 
-@implementation EPCalloutAnnotationView
+@implementation MPCalloutAnnotationView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     
@@ -48,9 +48,9 @@
 }
 
 +(instancetype)calloutViewWithMapView:(MKMapView *)mapView :(NSString *)key{
-    EPCalloutAnnotationView *calloutView=(EPCalloutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:key];
+    MPCalloutAnnotationView *calloutView=(MPCalloutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:key];
     if (!calloutView) {
-        calloutView=[[EPCalloutAnnotationView alloc] initWithFrame:CGRectMake(0, 0, 30, 37)];
+        calloutView=[[MPCalloutAnnotationView alloc] initWithFrame:CGRectMake(0, 0, 30, 37)];
 //        calloutView.backgroundColor=[UIColor greenColor];
 //        calloutView.alpha = 0.5;
     }
@@ -59,7 +59,7 @@
 
 -(void)setImage:(UIImage *)pimage{
     self.imgPin.image=pimage;
-//    EPAnnotation * dcannotation = self.annotation;
+//    MPAnnotation * dcannotation = self.annotation;
 }
 
 
@@ -172,7 +172,7 @@
 
 
 -(void)TapAction{
-    EPAnnotation * dcannotation = self.annotation;
+    MPAnnotation * dcannotation = self.annotation;
     if(self.delegate && [self.delegate respondsToSelector:@selector(clickPinWithObj:)]){
         [self.delegate clickPinWithObj:dcannotation.obj];
     }

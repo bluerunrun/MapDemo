@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "EPCalloutAnnotationView.h"
+#import "MPCalloutAnnotationView.h"
 #import "MissionRangeView.h"
 
 
@@ -28,20 +28,75 @@
 
 @implementation HomeViewController
 
+#pragma mark -LifeCycle
+
+-(void)dealloc{
+    if (self.mapKitView) {
+        self.mapKitView.showsUserLocation = NO;
+        self.mapKitView.userTrackingMode  = MKUserTrackingModeFollow;
+        [self.mapKitView.layer removeAllAnimations];
+        [self.mapKitView removeAnnotations:self.mapKitView.annotations];
+        self.mapKitView.delegate = nil;
+        self.mapKitView = nil;
+    }
+    if (self.locationManager) {
+        [self.locationManager stopUpdatingLocation];
+        self.locationManager.delegate=nil;
+        self.locationManager = nil;
+    }
+    if(self.annotions){
+        [self.annotions removeAllObjects];
+        self.annotions=nil;
+    }
+    self.userLocation=nil;
+    self.dataList=nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    
+    //设置MKMapView
+    self.mapKitView.delegate=self;
+    self.mapKitView.showsUserLocation=YES;
+    self.mapKitView.userTrackingMode = MKUserTrackingModeFollow;
+    self.mapKitView.mapType=MKMapTypeStandard;
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue]>=9.0) {
+        self.mapKitView.showsCompass=NO;
+    }
+    
+    //初始化locationManger管理器对象
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = 100;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue]>=8.0) {
+        //是否具有定位权限
+        int status = [CLLocationManager authorizationStatus];
+        //    NSLog(@"\nstatus :%d",status);
+        if(![CLLocationManager locationServicesEnabled] || status!=kCLAuthorizationStatusAuthorizedAlways || status!=kCLAuthorizationStatusAuthorizedWhenInUse){
+            //请求权限
+            [self.locationManager requestWhenInUseAuthorization];
+        }
+    }
+    
+    self.selectRangeIndex=0;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark -ResponseMethods
+
 - (IBAction)menuAction:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ShowMenu" object:nil];
 }
-
-#pragma mark -ResponseMethods
 
 - (IBAction)locateAction:(UIButton *)sender {
     
@@ -80,7 +135,7 @@
             CLLocationDegrees lat = 22.151408;
             CLLocationDegrees lon = 113.564488;
             CLLocationCoordinate2D coord=CLLocationCoordinate2DMake(lat,lon);
-            EPAnnotation *annotation= [[EPAnnotation alloc] init];
+            MPAnnotation *annotation= [[MPAnnotation alloc] init];
             annotation.obj = obj;
             annotation.coordinate=coord;
             [self.annotions addObject:annotation];
@@ -114,8 +169,8 @@
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
     
-    if([annotation isKindOfClass:[EPAnnotation class]]){
-        EPCalloutAnnotationView *calloutView=[EPCalloutAnnotationView calloutViewWithMapView:mapView :@"calloutDirCare"];
+    if([annotation isKindOfClass:[MPAnnotation class]]){
+        MPCalloutAnnotationView *calloutView=[MPCalloutAnnotationView calloutViewWithMapView:mapView :@"calloutDirCare"];
         calloutView.annotation=annotation;
         calloutView.image=[UIImage imageNamed:@"main_icon_Parking-Metre"];
         calloutView.delegate=self;
@@ -125,7 +180,7 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
-    if ([view.annotation isKindOfClass:[EPAnnotation class]]) {
+    if ([view.annotation isKindOfClass:[MPAnnotation class]]) {
         [self.mapKitView setCenterCoordinate:view.annotation.coordinate animated:YES];
     }
 }
@@ -135,7 +190,7 @@
     CLLocationCoordinate2D loc = [userLocation coordinate];
     //    NSLog(@"更新用戶位置");
     self.userLocation = [[CLLocation alloc] initWithLatitude:loc.latitude longitude:loc.longitude];
-
+    NSLog(@"经纬度＝%f,%f",loc.longitude,loc.latitude);
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(nonnull NSError *)error{
@@ -163,7 +218,7 @@
 #pragma mark 移除所用自定义大头针
 -(void)removeCustomAnnotation{
     [self.mapKitView.annotations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isKindOfClass:[EPAnnotation class]]) {
+        if ([obj isKindOfClass:[MPAnnotation class]]) {
             [self.mapKitView removeAnnotation:obj];
         }
     }];
