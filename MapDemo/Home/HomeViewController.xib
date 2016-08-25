@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="mapKitView" destination="HXH-SN-Onn" id="yBK-MS-Hrj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="IW3-s0-x0L"/>
             </connections>
         </placeholder>
@@ -54,37 +55,62 @@
                         <constraint firstAttribute="bottom" secondItem="Ww2-Ru-dy8" secondAttribute="bottom" constant="11" id="xSy-5A-cYm"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsw-FO-VJU">
-                    <rect key="frame" x="137" y="274" width="46" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HXH-SN-Onn">
+                    <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="oNq-VD-M9f"/>
+                    </connections>
+                </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示用户位置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-3s-7Cf">
+                    <rect key="frame" x="8" y="68" width="304" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egu-rE-4Xw">
-                    <rect key="frame" x="86" y="321" width="148" height="50"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-QP-1de">
+                    <rect key="frame" x="267" y="134" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="148" id="d9r-Ng-0Ue"/>
-                        <constraint firstAttribute="height" constant="50" id="g58-D2-FGE"/>
+                        <constraint firstAttribute="width" constant="40" id="HtY-cq-Ae4"/>
+                        <constraint firstAttribute="height" constant="40" id="k8T-cO-Xoj"/>
                     </constraints>
-                    <state key="normal" title="Push To Anthoer VC"/>
+                    <state key="normal" image="main_but_range"/>
                     <connections>
-                        <action selector="pushAction:" destination="-1" eventType="touchUpInside" id="fhM-ln-v7E"/>
+                        <action selector="chooseAction:" destination="-1" eventType="touchUpInside" id="Uwh-M2-bDg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkF-jL-sRQ">
+                    <rect key="frame" x="267" y="92" width="40" height="40"/>
+                    <state key="normal" image="main_but_location"/>
+                    <connections>
+                        <action selector="locateAction:" destination="-1" eventType="touchUpInside" id="PmG-XI-pho"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="egu-rE-4Xw" firstAttribute="centerX" secondItem="gsw-FO-VJU" secondAttribute="centerX" id="4hu-0C-Cjx"/>
-                <constraint firstItem="gsw-FO-VJU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Fb3-Ml-HX2"/>
-                <constraint firstItem="gsw-FO-VJU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GVZ-l6-TCL"/>
+                <constraint firstItem="HXH-SN-Onn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7tU-aN-8Ih"/>
+                <constraint firstAttribute="bottom" secondItem="HXH-SN-Onn" secondAttribute="bottom" id="G2P-aK-3no"/>
+                <constraint firstItem="HXH-SN-Onn" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" id="KWO-ji-rAK"/>
                 <constraint firstItem="dag-Ge-QdE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OcG-sl-YzZ"/>
+                <constraint firstItem="0PU-3s-7Cf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TAV-1D-Z3m"/>
+                <constraint firstItem="zFY-QP-1de" firstAttribute="centerX" secondItem="vkF-jL-sRQ" secondAttribute="centerX" id="Xwc-GJ-eKj"/>
                 <constraint firstAttribute="trailing" secondItem="dag-Ge-QdE" secondAttribute="trailing" id="aZm-uk-OuG"/>
+                <constraint firstItem="vkF-jL-sRQ" firstAttribute="top" secondItem="0PU-3s-7Cf" secondAttribute="bottom" constant="8" id="cJE-Ll-Lyy"/>
+                <constraint firstItem="vkF-jL-sRQ" firstAttribute="height" secondItem="zFY-QP-1de" secondAttribute="height" id="dUm-c3-IVE"/>
+                <constraint firstItem="zFY-QP-1de" firstAttribute="top" secondItem="vkF-jL-sRQ" secondAttribute="bottom" constant="2" id="dkp-4n-BNs"/>
+                <constraint firstAttribute="trailing" secondItem="0PU-3s-7Cf" secondAttribute="trailing" constant="8" id="fMp-BZ-N9T"/>
+                <constraint firstAttribute="trailing" secondItem="HXH-SN-Onn" secondAttribute="trailing" id="fUm-qF-sjd"/>
+                <constraint firstItem="0PU-3s-7Cf" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" constant="8" id="hga-go-DLz"/>
                 <constraint firstItem="dag-Ge-QdE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mGN-rZ-ImE"/>
-                <constraint firstItem="egu-rE-4Xw" firstAttribute="top" secondItem="gsw-FO-VJU" secondAttribute="bottom" constant="26" id="qAH-2Q-YZE"/>
+                <constraint firstItem="vkF-jL-sRQ" firstAttribute="width" secondItem="zFY-QP-1de" secondAttribute="width" id="sC8-B9-Igr"/>
+                <constraint firstAttribute="trailing" secondItem="vkF-jL-sRQ" secondAttribute="trailing" constant="13" id="yy5-MV-i8o"/>
             </constraints>
-            <point key="canvasLocation" x="299" y="447"/>
+            <point key="canvasLocation" x="529" y="401"/>
         </view>
     </objects>
     <resources>
         <image name="ico_menu_normal" width="20" height="14"/>
+        <image name="main_but_location" width="35" height="35"/>
+        <image name="main_but_range" width="35" height="35"/>
     </resources>
 </document>
