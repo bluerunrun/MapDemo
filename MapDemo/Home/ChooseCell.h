@@ -1,5 +1,5 @@
 //
-//  MissionRangeCell.h
+//  ChooseCell.h
 //  EasyMeter
 //
 //  Created by huweidong on 1/8/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MissionRangeCell : UITableViewCell
+@interface ChooseCell : UITableViewCell
 
 @property (nonatomic, assign) BOOL imageIsHidden;
 @property (nonatomic, copy) NSString *titleStr;

@@ -1,16 +1,16 @@
 //
-//  MissionRangeView.m
+//  ChooseView.m
 //  EasyMeter
 //
 //  Created by huweidong on 29/7/16.
 //  Copyright © 2016年 zxd. All rights reserved.
 //
 
-#import "MissionRangeView.h"
-#import "MissionRangeCell.h"
+#import "ChooseView.h"
+#import "ChooseCell.h"
 #import "AppDelegate.h"
 
-@interface MissionRangeView()<UITableViewDataSource,UITableViewDelegate>
+@interface ChooseView()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *rangeView;
 @property (weak, nonatomic) IBOutlet UITableView *rangeTableView;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MissionRangeView
+@implementation ChooseView
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -34,7 +34,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame AndDataList:(NSArray *)list{
     self=[super initWithFrame:frame];
-    self=[[[NSBundle mainBundle] loadNibNamed:@"MissionRangeView" owner:self options:nil] lastObject];
+    self=[[[NSBundle mainBundle] loadNibNamed:@"ChooseView" owner:self options:nil] lastObject];
     if (self) {
         self.frame=frame;
     }
@@ -87,9 +87,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MissionRangeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MissionRangeCell"];
+    ChooseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChooseCell"];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"MissionRangeCell" owner:self options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ChooseCell" owner:self options:nil] lastObject];
         [cell setSeparatorInset:UIEdgeInsetsZero];
         if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
             if(indexPath.row==3){

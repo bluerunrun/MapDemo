@@ -33,10 +33,10 @@
 		7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA771D6EECFE00F5B7E8 /* PushViewController.m */; };
 		7AD8AA7E1D6EECFE00F5B7E8 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */; };
 		7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */; };
-		7AD8AA881D6EF29F00F5B7E8 /* MissionRangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA831D6EF29F00F5B7E8 /* MissionRangeCell.m */; };
-		7AD8AA891D6EF29F00F5B7E8 /* MissionRangeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA841D6EF29F00F5B7E8 /* MissionRangeCell.xib */; };
-		7AD8AA8A1D6EF29F00F5B7E8 /* MissionRangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA861D6EF29F00F5B7E8 /* MissionRangeView.m */; };
-		7AD8AA8B1D6EF29F00F5B7E8 /* MissionRangeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA871D6EF29F00F5B7E8 /* MissionRangeView.xib */; };
+		7AD8AA881D6EF29F00F5B7E8 /* ChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA831D6EF29F00F5B7E8 /* ChooseCell.m */; };
+		7AD8AA891D6EF29F00F5B7E8 /* ChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA841D6EF29F00F5B7E8 /* ChooseCell.xib */; };
+		7AD8AA8A1D6EF29F00F5B7E8 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA861D6EF29F00F5B7E8 /* ChooseView.m */; };
+		7AD8AA8B1D6EF29F00F5B7E8 /* ChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA871D6EF29F00F5B7E8 /* ChooseView.xib */; };
 		9808D3D86612A4F5BAB9B763 /* libPods-MapDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 924AC8B3F6F73818EE6270F1 /* libPods-MapDemo.a */; };
 		FF6D0882EECE2BA354AF42ED /* libPods-MapDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241BA886AEA9212C5DB7E30A /* libPods-MapDemoUITests.a */; };
 /* End PBXBuildFile section */
@@ -107,12 +107,12 @@
 		7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
 		7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalloutAnnotationView.h; sourceTree = "<group>"; };
 		7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
-		7AD8AA821D6EF29F00F5B7E8 /* MissionRangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionRangeCell.h; sourceTree = "<group>"; };
-		7AD8AA831D6EF29F00F5B7E8 /* MissionRangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionRangeCell.m; sourceTree = "<group>"; };
-		7AD8AA841D6EF29F00F5B7E8 /* MissionRangeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissionRangeCell.xib; sourceTree = "<group>"; };
-		7AD8AA851D6EF29F00F5B7E8 /* MissionRangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionRangeView.h; sourceTree = "<group>"; };
-		7AD8AA861D6EF29F00F5B7E8 /* MissionRangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionRangeView.m; sourceTree = "<group>"; };
-		7AD8AA871D6EF29F00F5B7E8 /* MissionRangeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissionRangeView.xib; sourceTree = "<group>"; };
+		7AD8AA821D6EF29F00F5B7E8 /* ChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCell.h; sourceTree = "<group>"; };
+		7AD8AA831D6EF29F00F5B7E8 /* ChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCell.m; sourceTree = "<group>"; };
+		7AD8AA841D6EF29F00F5B7E8 /* ChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCell.xib; sourceTree = "<group>"; };
+		7AD8AA851D6EF29F00F5B7E8 /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseView.h; sourceTree = "<group>"; };
+		7AD8AA861D6EF29F00F5B7E8 /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseView.m; sourceTree = "<group>"; };
+		7AD8AA871D6EF29F00F5B7E8 /* ChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseView.xib; sourceTree = "<group>"; };
 		9122A5F63EE97D80C3C099D4 /* Pods-MapDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemo/Pods-MapDemo.release.xcconfig"; sourceTree = "<group>"; };
 		924AC8B3F6F73818EE6270F1 /* libPods-MapDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC465E6618C81F7EE7C0091E /* Pods-MapDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemoUITests/Pods-MapDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -274,12 +274,12 @@
 		7AD8AA711D6EECFE00F5B7E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7AD8AA821D6EF29F00F5B7E8 /* MissionRangeCell.h */,
-				7AD8AA831D6EF29F00F5B7E8 /* MissionRangeCell.m */,
-				7AD8AA841D6EF29F00F5B7E8 /* MissionRangeCell.xib */,
-				7AD8AA851D6EF29F00F5B7E8 /* MissionRangeView.h */,
-				7AD8AA861D6EF29F00F5B7E8 /* MissionRangeView.m */,
-				7AD8AA871D6EF29F00F5B7E8 /* MissionRangeView.xib */,
+				7AD8AA821D6EF29F00F5B7E8 /* ChooseCell.h */,
+				7AD8AA831D6EF29F00F5B7E8 /* ChooseCell.m */,
+				7AD8AA841D6EF29F00F5B7E8 /* ChooseCell.xib */,
+				7AD8AA851D6EF29F00F5B7E8 /* ChooseView.h */,
+				7AD8AA861D6EF29F00F5B7E8 /* ChooseView.m */,
+				7AD8AA871D6EF29F00F5B7E8 /* ChooseView.xib */,
 				7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */,
 				7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */,
 				7AD8AA721D6EECFE00F5B7E8 /* HomeViewController.h */,
@@ -421,7 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD8AA1E1D6EEA2200F5B7E8 /* LaunchScreen.storyboard in Resources */,
-				7AD8AA8B1D6EF29F00F5B7E8 /* MissionRangeView.xib in Resources */,
+				7AD8AA8B1D6EF29F00F5B7E8 /* ChooseView.xib in Resources */,
 				7AD8AA5C1D6EEBC900F5B7E8 /* VersionViewController.xib in Resources */,
 				7AD8AA1B1D6EEA2200F5B7E8 /* Assets.xcassets in Resources */,
 				7AD8AA5A1D6EEBC900F5B7E8 /* MenuViewController.xib in Resources */,
@@ -429,7 +429,7 @@
 				7AD8AA7A1D6EECFE00F5B7E8 /* FirstViewController.xib in Resources */,
 				7AD8AA191D6EEA2200F5B7E8 /* Main.storyboard in Resources */,
 				7AD8AA7E1D6EECFE00F5B7E8 /* PushViewController.xib in Resources */,
-				7AD8AA891D6EF29F00F5B7E8 /* MissionRangeCell.xib in Resources */,
+				7AD8AA891D6EF29F00F5B7E8 /* ChooseCell.xib in Resources */,
 				7AD8AA7C1D6EECFE00F5B7E8 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,11 +581,11 @@
 				7AD8AA791D6EECFE00F5B7E8 /* FirstViewController.m in Sources */,
 				7AD8AA551D6EEBC900F5B7E8 /* GHRevealViewController.m in Sources */,
 				7AD8AA5B1D6EEBC900F5B7E8 /* VersionViewController.m in Sources */,
-				7AD8AA881D6EF29F00F5B7E8 /* MissionRangeCell.m in Sources */,
+				7AD8AA881D6EF29F00F5B7E8 /* ChooseCell.m in Sources */,
 				7AD8AA591D6EEBC900F5B7E8 /* MenuViewController.m in Sources */,
 				7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */,
 				7AD8AA571D6EEBC900F5B7E8 /* MenuCell.m in Sources */,
-				7AD8AA8A1D6EF29F00F5B7E8 /* MissionRangeView.m in Sources */,
+				7AD8AA8A1D6EF29F00F5B7E8 /* ChooseView.m in Sources */,
 				7AD8AA541D6EEBC900F5B7E8 /* CustomNavigationController.m in Sources */,
 				7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */,
 				7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */,

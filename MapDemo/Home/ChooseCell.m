@@ -1,21 +1,21 @@
 //
-//  MissionRangeCell.m
+//  ChooseCell.m
 //  EasyMeter
 //
 //  Created by huweidong on 1/8/16.
 //  Copyright © 2016年 zxd. All rights reserved.
 //
 
-#import "MissionRangeCell.h"
+#import "ChooseCell.h"
 
-@interface MissionRangeCell()
+@interface ChooseCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imageSelect;
 
 @end
 
-@implementation MissionRangeCell
+@implementation ChooseCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

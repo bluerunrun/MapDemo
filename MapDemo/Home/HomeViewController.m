@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "MPCalloutAnnotationView.h"
-#import "MissionRangeView.h"
+#import "ChooseView.h"
 
 
 #define DefaultCoordinate CLLocationCoordinate2DMake(22.151408, 113.564488)
@@ -112,7 +112,7 @@
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
     NSMutableArray *list = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    MissionRangeView *rangeView=[[MissionRangeView alloc] initWithFrame:self.view.bounds AndDataList:list];
+    ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [rangeView seleceCell:self.selectRangeIndex];
     [rangeView show:^(int rangeIndex) {
         weakSelf.selectRangeIndex=rangeIndex;

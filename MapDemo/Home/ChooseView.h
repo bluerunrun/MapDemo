@@ -1,5 +1,5 @@
 //
-//  MissionRangeView.h
+//  ChooseView.h
 //  EasyMeter
 //
 //  Created by huweidong on 29/7/16.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 typedef void(^PaymentCallBack)(int rangeIndex);
 
-@interface MissionRangeView : UIView
+@interface ChooseView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame AndDataList:(NSArray *)list;
 - (void)show:(PaymentCallBack) compite;
