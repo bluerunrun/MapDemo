@@ -56,7 +56,8 @@
 
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
-    MissionRangeView *rangeView=[[MissionRangeView alloc] initWithFrame:self.view.bounds AndDataList:[NSMutableArray array]];
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
+    MissionRangeView *rangeView=[[MissionRangeView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [rangeView seleceCell:self.selectRangeIndex];
     [rangeView show:^(int rangeIndex) {
         weakSelf.selectRangeIndex=rangeIndex;
@@ -64,6 +65,7 @@
     }];
 }
 
+#pragma mark -PrivateMethods
 - (void)setDataList:(NSMutableArray *)pdataList{
     _dataList=pdataList;
     double minLat = 360.0f, maxLat = -360.0f;
