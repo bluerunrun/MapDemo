@@ -68,10 +68,16 @@
                         <constraint firstAttribute="width" constant="40" id="rc1-dW-aVJ"/>
                     </constraints>
                     <state key="normal" image="main_but_range"/>
+                    <connections>
+                        <action selector="chooseAction:" destination="-1" eventType="touchUpInside" id="4fF-cR-Vkr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-o7-h39">
                     <rect key="frame" x="267" y="92" width="40" height="40"/>
                     <state key="normal" image="main_but_location"/>
+                    <connections>
+                        <action selector="locateAction:" destination="-1" eventType="touchUpInside" id="DMD-0t-swO"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

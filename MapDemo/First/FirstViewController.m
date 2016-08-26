@@ -62,11 +62,12 @@
 }
 
 - (void)addMPAnnotations{
-    
+    CLLocationDegrees lat = self.userLocation?self.userLocation.coordinate.latitude:DefaultCoordinate.latitude;
+     CLLocationDegrees lon = self.userLocation?self.userLocation.coordinate.longitude:DefaultCoordinate.longitude;
     NSMutableArray *dataList = [NSMutableArray array];
     for (int i=0; i<4; i++) {
-        CLLocationDegrees lat = (i%2==0)?(22.151408+0.0003*i):(22.151408-0.0005*i);
-        CLLocationDegrees lon = (i%2==0)?(113.564488+0.0008*i):(113.564488-0.0004*i);
+        lat = (i%2==0)?(lat+0.0003*i):(lat-0.0005*i);
+        lon = (i%2==0)?(lon+0.0008*i):(lon-0.0004*i);
         CLLocationCoordinate2D coord=CLLocationCoordinate2DMake(lat,lon);
         MPAnnotation *annotation= [[MPAnnotation alloc] init];
         annotation.coordinate=coord;
@@ -137,6 +138,7 @@
         switch (selectIndex) {
             case 0:
             {
+                [self removeAllAnnotation];
                 [weakSelf addMPAnnotations];
             }
                 break;
@@ -178,14 +180,13 @@
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     CLLocationCoordinate2D coordinate = [userLocation coordinate];
     //    NSLog(@"更新用戶位置");
+    self.mapKitView.showsUserLocation = NO;
     self.userLocation = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    [self goToPosition:coordinate];
-    NSLog(@"mapView定位更新 经纬度＝%f,%f",coordinate.longitude,coordinate.latitude);
+    [self addMPAnnotations];
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(nonnull NSError *)error{
-    NSLog(@"mapView定位失敗");
-    [self locateAction:nil];
+    [self addMPAnnotations];
 }
 
 

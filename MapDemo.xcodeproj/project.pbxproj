@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		744D96FAE4BB999C59565A41 /* libPods-MapDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB7F83ED7A248901C3A74C9 /* libPods-MapDemoTests.a */; };
 		7A315CA31D7017F400747E2B /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA21D7017F400747E2B /* JZLocationConverter.m */; };
+		7A315CA71D702FBF00747E2B /* UMKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA61D702FBF00747E2B /* UMKAnnotation.m */; };
+		7A315CAA1D70307F00747E2B /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */; };
 		7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA0F1D6EEA2200F5B7E8 /* main.m */; };
 		7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA121D6EEA2200F5B7E8 /* AppDelegate.m */; };
 		7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA151D6EEA2200F5B7E8 /* ViewController.m */; };
@@ -33,7 +35,6 @@
 		7AD8AA7C1D6EECFE00F5B7E8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA741D6EECFE00F5B7E8 /* HomeViewController.xib */; };
 		7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA771D6EECFE00F5B7E8 /* PushViewController.m */; };
 		7AD8AA7E1D6EECFE00F5B7E8 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */; };
-		7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */; };
 		7AD8AA881D6EF29F00F5B7E8 /* ChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA831D6EF29F00F5B7E8 /* ChooseCell.m */; };
 		7AD8AA891D6EF29F00F5B7E8 /* ChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8AA841D6EF29F00F5B7E8 /* ChooseCell.xib */; };
 		7AD8AA8A1D6EF29F00F5B7E8 /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA861D6EF29F00F5B7E8 /* ChooseView.m */; };
@@ -67,6 +68,10 @@
 		7A315CA11D7017F400747E2B /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
 		7A315CA21D7017F400747E2B /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
 		7A315CA41D702C4F00747E2B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7A315CA51D702FBF00747E2B /* UMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMKAnnotation.h; sourceTree = "<group>"; };
+		7A315CA61D702FBF00747E2B /* UMKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMKAnnotation.m; sourceTree = "<group>"; };
+		7A315CA81D70307F00747E2B /* MPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalloutAnnotationView.h; sourceTree = "<group>"; };
+		7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
 		7AD8AA0B1D6EEA2200F5B7E8 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8AA0F1D6EEA2200F5B7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,8 +114,6 @@
 		7AD8AA761D6EECFE00F5B7E8 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		7AD8AA771D6EECFE00F5B7E8 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		7AD8AA781D6EECFE00F5B7E8 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
-		7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalloutAnnotationView.h; sourceTree = "<group>"; };
-		7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
 		7AD8AA821D6EF29F00F5B7E8 /* ChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCell.h; sourceTree = "<group>"; };
 		7AD8AA831D6EF29F00F5B7E8 /* ChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCell.m; sourceTree = "<group>"; };
 		7AD8AA841D6EF29F00F5B7E8 /* ChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCell.xib; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 		7AD8AA6D1D6EECFE00F5B7E8 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				7A315CA81D70307F00747E2B /* MPCalloutAnnotationView.h */,
+				7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */,
 				7AD8AA6E1D6EECFE00F5B7E8 /* FirstViewController.h */,
 				7AD8AA6F1D6EECFE00F5B7E8 /* FirstViewController.m */,
 				7AD8AA701D6EECFE00F5B7E8 /* FirstViewController.xib */,
@@ -303,8 +308,8 @@
 				7AD8AA851D6EF29F00F5B7E8 /* ChooseView.h */,
 				7AD8AA861D6EF29F00F5B7E8 /* ChooseView.m */,
 				7AD8AA871D6EF29F00F5B7E8 /* ChooseView.xib */,
-				7AD8AA7F1D6EF1A000F5B7E8 /* MPCalloutAnnotationView.h */,
-				7AD8AA801D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m */,
+				7A315CA51D702FBF00747E2B /* UMKAnnotation.h */,
+				7A315CA61D702FBF00747E2B /* UMKAnnotation.m */,
 				7AD8AA721D6EECFE00F5B7E8 /* HomeViewController.h */,
 				7AD8AA731D6EECFE00F5B7E8 /* HomeViewController.m */,
 				7AD8AA741D6EECFE00F5B7E8 /* HomeViewController.xib */,
@@ -611,11 +616,12 @@
 				7AD8AA571D6EEBC900F5B7E8 /* MenuCell.m in Sources */,
 				7AD8AA8A1D6EF29F00F5B7E8 /* ChooseView.m in Sources */,
 				7AD8AA541D6EEBC900F5B7E8 /* CustomNavigationController.m in Sources */,
-				7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */,
 				7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */,
 				7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */,
 				7AD8AA561D6EEBC900F5B7E8 /* MainViewController.m in Sources */,
 				7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */,
+				7A315CAA1D70307F00747E2B /* MPCalloutAnnotationView.m in Sources */,
+				7A315CA71D702FBF00747E2B /* UMKAnnotation.m in Sources */,
 				7AD8AA531D6EEBC900F5B7E8 /* clsMenu.m in Sources */,
 				7AD8AA7B1D6EECFE00F5B7E8 /* HomeViewController.m in Sources */,
 				7A315CA31D7017F400747E2B /* JZLocationConverter.m in Sources */,
@@ -691,6 +697,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -735,6 +742,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

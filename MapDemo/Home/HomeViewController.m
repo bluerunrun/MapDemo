@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "MPCalloutAnnotationView.h"
+#import "UMKAnnotation.h"
 #import "ChooseView.h"
 #import "JZLocationConverter.h"
 
@@ -196,13 +196,6 @@
     [self.mapKitView removeAnnotations:self.mapKitView.annotations];
 }
 
--(void)removeMPAnnotation{
-    [self.mapKitView.annotations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isKindOfClass:[MPAnnotation class]]) {
-            [self.mapKitView removeAnnotation:obj];
-        }
-    }];
-}
 
 #pragma mark - CoreLocation 代理
 #pragma mark -- 跟踪定位代理方法，每次位置发生变化即会执行（只要定位到相应位置）

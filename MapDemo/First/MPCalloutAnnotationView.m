@@ -9,14 +9,6 @@
 #import "MPCalloutAnnotationView.h"
 #import <Masonry.h>
 
-@implementation UMKAnnotation
-
-- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
-    _coordinate = newCoordinate;
-}
-
-@end
-
 
 @implementation MPAnnotation
 
