@@ -9,7 +9,6 @@
 #import "HomeViewController.h"
 #import "MPCalloutAnnotationView.h"
 #import "ChooseView.h"
-#import "WGS84TOGCJ02.h"
 #import "JZLocationConverter.h"
 
 
