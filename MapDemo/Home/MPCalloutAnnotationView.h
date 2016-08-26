@@ -8,11 +8,21 @@
 
 #import <MapKit/MapKit.h>
 
+
+@interface UMKAnnotation : NSObject<MKAnnotation>
+
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+
+@end
+
+
 @interface MPAnnotation : NSObject<MKAnnotation>
 
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *subtitle;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 
 @property (nonatomic, strong) NSObject *obj;
 @property (nonatomic, assign) BOOL draggable;
