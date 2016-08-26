@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "MPCalloutAnnotationView.h"
 #import "ChooseView.h"
+#import "WGS84TOGCJ02.h"
+#import "JZLocationConverter.h"
 
 
 #define DefaultCoordinate CLLocationCoordinate2DMake(22.151408, 113.564488)
@@ -23,6 +25,8 @@
 @property (nonatomic, strong) NSMutableArray *dataList;
 
 @property (nonatomic, assign) int selectIndex;
+
+@property (nonatomic, assign) BOOL isFixLocation;
 
 @end
 
@@ -59,6 +63,7 @@
     [self initMap];
     
     self.selectIndex=0;
+    self.isFixLocation = NO;
     
 }
 
@@ -166,24 +171,33 @@
 
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
-    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"mapView定位",@"Manager定位",@"3",@"4",@"5", nil];
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"mapView定位",@"Manager定位",@"修正定位偏差",@"4",@"5", nil];
     ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [rangeView seleceCell:self.selectIndex];
     [rangeView show:^(int selectIndex) {
+        weakSelf.isFixLocation = NO;
         weakSelf.selectIndex=selectIndex;
         switch (selectIndex) {
             case 0:
             {
-                [self removeAllAnnotation];
-                self.mapKitView.showsUserLocation=YES;
-                [self.locationManager stopUpdatingLocation];
+                [weakSelf removeAllAnnotation];
+                weakSelf.mapKitView.showsUserLocation=YES;
+                [weakSelf.locationManager stopUpdatingLocation];
             }
                 break;
             case 1:
             {
-                [self removeAllAnnotation];
-                self.mapKitView.showsUserLocation=NO;
-                [self.locationManager startUpdatingLocation];
+                [weakSelf removeAllAnnotation];
+                weakSelf.mapKitView.showsUserLocation=NO;
+                [weakSelf.locationManager startUpdatingLocation];
+            }
+                break;
+            case 2:
+            {
+                weakSelf.isFixLocation = YES;
+                [weakSelf removeAllAnnotation];
+                weakSelf.mapKitView.showsUserLocation=NO;
+                [weakSelf.locationManager startUpdatingLocation];
             }
                 break;
             default:
@@ -266,6 +280,11 @@
     CLLocationCoordinate2D coordinate=location.coordinate;//位置坐标
     NSLog(@"manager定位更新 经度：%f,纬度：%f,海拔：%f,航向：%f,行走速度：%f",coordinate.longitude,coordinate.latitude,location.altitude,location.course,location.speed);
 
+    if (self.isFixLocation) {
+        //当使用模拟器定位在中国大陆以外地区，计算GCJ-02坐标还是返回WGS-84
+        coordinate = [JZLocationConverter wgs84ToGcj02:coordinate];
+    }
+    
     [self removeAllAnnotation];
     UMKAnnotation *annotation=[[UMKAnnotation alloc]init];
     annotation.title=@"CMJ Studio";

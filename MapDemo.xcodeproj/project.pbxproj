@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		744D96FAE4BB999C59565A41 /* libPods-MapDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB7F83ED7A248901C3A74C9 /* libPods-MapDemoTests.a */; };
+		7A315C9F1D6FF00000747E2B /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315C9E1D6FF00000747E2B /* WGS84TOGCJ02.m */; };
+		7A315CA31D7017F400747E2B /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA21D7017F400747E2B /* JZLocationConverter.m */; };
 		7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA0F1D6EEA2200F5B7E8 /* main.m */; };
 		7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA121D6EEA2200F5B7E8 /* AppDelegate.m */; };
 		7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA151D6EEA2200F5B7E8 /* ViewController.m */; };
@@ -63,6 +65,10 @@
 		54CC43A0E6B17FA092818B40 /* Pods-MapDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemoTests/Pods-MapDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B53292900E1476F7B814DC4 /* Pods-MapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemo/Pods-MapDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		77F01B46576FE717A9DF0B55 /* Pods-MapDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemoTests/Pods-MapDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A315C9D1D6FF00000747E2B /* WGS84TOGCJ02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WGS84TOGCJ02.h; path = Class/WGS84TOGCJ02.h; sourceTree = "<group>"; };
+		7A315C9E1D6FF00000747E2B /* WGS84TOGCJ02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WGS84TOGCJ02.m; path = Class/WGS84TOGCJ02.m; sourceTree = "<group>"; };
+		7A315CA11D7017F400747E2B /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
+		7A315CA21D7017F400747E2B /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
 		7AD8AA0B1D6EEA2200F5B7E8 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8AA0F1D6EEA2200F5B7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +167,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7A315C9C1D6FEFD400747E2B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				7A315CA01D7017F400747E2B /* JZLocationConverter */,
+				7A315C9D1D6FF00000747E2B /* WGS84TOGCJ02.h */,
+				7A315C9E1D6FF00000747E2B /* WGS84TOGCJ02.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		7A315CA01D7017F400747E2B /* JZLocationConverter */ = {
+			isa = PBXGroup;
+			children = (
+				7A315CA11D7017F400747E2B /* JZLocationConverter.h */,
+				7A315CA21D7017F400747E2B /* JZLocationConverter.m */,
+			);
+			path = JZLocationConverter;
+			sourceTree = "<group>";
+		};
 		7AD8AA021D6EEA2200F5B7E8 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +213,7 @@
 			children = (
 				7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */,
 				7AD8AA121D6EEA2200F5B7E8 /* AppDelegate.m */,
+				7A315C9C1D6FEFD400747E2B /* Class */,
 				7AD8AA751D6EECFE00F5B7E8 /* Push */,
 				7AD8AA6D1D6EECFE00F5B7E8 /* First */,
 				7AD8AA711D6EECFE00F5B7E8 /* Home */,
@@ -588,6 +614,7 @@
 				7AD8AA571D6EEBC900F5B7E8 /* MenuCell.m in Sources */,
 				7AD8AA8A1D6EF29F00F5B7E8 /* ChooseView.m in Sources */,
 				7AD8AA541D6EEBC900F5B7E8 /* CustomNavigationController.m in Sources */,
+				7A315C9F1D6FF00000747E2B /* WGS84TOGCJ02.m in Sources */,
 				7AD8AA811D6EF1A000F5B7E8 /* MPCalloutAnnotationView.m in Sources */,
 				7AD8AA7D1D6EECFE00F5B7E8 /* PushViewController.m in Sources */,
 				7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */,
@@ -595,6 +622,7 @@
 				7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */,
 				7AD8AA531D6EEBC900F5B7E8 /* clsMenu.m in Sources */,
 				7AD8AA7B1D6EECFE00F5B7E8 /* HomeViewController.m in Sources */,
+				7A315CA31D7017F400747E2B /* JZLocationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
