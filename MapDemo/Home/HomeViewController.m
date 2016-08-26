@@ -56,7 +56,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.automaticallyAdjustsScrollViewInsets=NO;
+    [self initMap];
     
+    self.selectRangeIndex=0;
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark -PrivateMethods
+
+- (void)initMap{
     //设置MKMapView
     self.mapKitView.delegate=self;
     self.mapKitView.showsUserLocation=YES;
@@ -81,46 +95,9 @@
             [self.locationManager requestWhenInUseAuthorization];
         }
     }
-    
-    self.selectRangeIndex=0;
-    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark -ResponseMethods
-
-- (IBAction)menuAction:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ShowMenu" object:nil];
-}
-
-- (IBAction)locateAction:(UIButton *)sender {
-    
-    if (self.userLocation) {
-        //        NSLog(@"根據放大level定位到用戶位置");
-        [self.mapKitView setCenterCoordinate:self.userLocation.coordinate animated:YES];
-    }else{
-        //        NSLog(@"定位失败 显示澳门地区");
-        [self.mapKitView setCenterCoordinate:DefaultCoordinate animated:YES];
-    }
-}
-
-- (IBAction)chooseAction:(id)sender {
-    __weak __typeof(self)weakSelf = self;
-    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
-    ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
-    [rangeView seleceCell:self.selectRangeIndex];
-    [rangeView show:^(int rangeIndex) {
-        weakSelf.selectRangeIndex=rangeIndex;
-        [weakSelf locateAction:nil];
-    }];
-}
-
-#pragma mark -PrivateMethods
 - (void)setDataList:(NSMutableArray *)pdataList{
     _dataList=pdataList;
     double minLat = 360.0f, maxLat = -360.0f;
@@ -163,6 +140,36 @@
 - (void)addAnnotation{
     [self removeCustomAnnotation];
     [self.mapKitView addAnnotations:self.annotions];
+}
+
+
+
+#pragma mark -ResponseMethods
+
+- (IBAction)menuAction:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ShowMenu" object:nil];
+}
+
+- (IBAction)locateAction:(UIButton *)sender {
+    
+    if (self.userLocation) {
+        //        NSLog(@"根據放大level定位到用戶位置");
+        [self.mapKitView setCenterCoordinate:self.userLocation.coordinate animated:YES];
+    }else{
+        //        NSLog(@"定位失败 显示澳门地区");
+        [self.mapKitView setCenterCoordinate:DefaultCoordinate animated:YES];
+    }
+}
+
+- (IBAction)chooseAction:(id)sender {
+    __weak __typeof(self)weakSelf = self;
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
+    ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
+    [rangeView seleceCell:self.selectRangeIndex];
+    [rangeView show:^(int rangeIndex) {
+        weakSelf.selectRangeIndex=rangeIndex;
+        [weakSelf locateAction:nil];
+    }];
 }
 
 #pragma mark -MKMapViewDelegate
