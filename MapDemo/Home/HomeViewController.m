@@ -85,7 +85,7 @@
     self.locationManager.delegate = self;
     self.locationManager.distanceFilter = 100;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [self.locationManager startUpdatingLocation];
+//    [self.locationManager startUpdatingLocation];
     if ([[[UIDevice currentDevice] systemVersion] doubleValue]>=8.0) {
         //是否具有定位权限
         int status = [CLLocationManager authorizationStatus];
@@ -163,7 +163,7 @@
 
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
-    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5", nil];
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"mapView定位",@"LManager定位",@"3",@"4",@"5", nil];
     ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [rangeView seleceCell:self.selectRangeIndex];
     [rangeView show:^(int rangeIndex) {
@@ -204,23 +204,6 @@
     NSLog(@"定位失敗");
     [self locateAction:nil];
 }
-
-//- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-//    double level = [self.mapKitView getZoomLevel];
-//    NSLog(@"regionDidChangeAnimated level:%f",level);
-//}
-
-//#pragma mark -CLLocationManagerDelegate
-//-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-//    NSLog(@"用戶位置發生改變");
-//    self.userLocation = [locations lastObject];
-//    NSLog(@"经纬度＝%f,%f",self.userLocation.coordinate.longitude,self.userLocation.coordinate.latitude);
-//    [self.mapKitView setCenterCoordinate:self.userLocation.coordinate zoomLevel:self.selectedRange.LEVEL animated:YES];
-//}
-
-//-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-//    self.userLocation = nil;
-//}
 
 #pragma mark 移除所用自定义大头针
 -(void)removeCustomAnnotation{
