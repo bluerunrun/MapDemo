@@ -35,7 +35,7 @@
                                 <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="TNj-wk-NtV"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww2-Ru-dy8">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户位置跟踪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww2-Ru-dy8">
                             <rect key="frame" x="46" y="27" width="228" height="22"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,12 +61,6 @@
                         <outlet property="delegate" destination="-1" id="oNq-VD-M9f"/>
                     </connections>
                 </mapView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示用户位置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-3s-7Cf">
-                    <rect key="frame" x="8" y="68" width="304" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-QP-1de">
                     <rect key="frame" x="267" y="134" width="40" height="40"/>
                     <constraints>
@@ -92,17 +86,14 @@
                 <constraint firstAttribute="bottom" secondItem="HXH-SN-Onn" secondAttribute="bottom" id="G2P-aK-3no"/>
                 <constraint firstItem="HXH-SN-Onn" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" id="KWO-ji-rAK"/>
                 <constraint firstItem="dag-Ge-QdE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OcG-sl-YzZ"/>
-                <constraint firstItem="0PU-3s-7Cf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TAV-1D-Z3m"/>
                 <constraint firstItem="zFY-QP-1de" firstAttribute="centerX" secondItem="vkF-jL-sRQ" secondAttribute="centerX" id="Xwc-GJ-eKj"/>
                 <constraint firstAttribute="trailing" secondItem="dag-Ge-QdE" secondAttribute="trailing" id="aZm-uk-OuG"/>
-                <constraint firstItem="vkF-jL-sRQ" firstAttribute="top" secondItem="0PU-3s-7Cf" secondAttribute="bottom" constant="8" id="cJE-Ll-Lyy"/>
                 <constraint firstItem="vkF-jL-sRQ" firstAttribute="height" secondItem="zFY-QP-1de" secondAttribute="height" id="dUm-c3-IVE"/>
                 <constraint firstItem="zFY-QP-1de" firstAttribute="top" secondItem="vkF-jL-sRQ" secondAttribute="bottom" constant="2" id="dkp-4n-BNs"/>
-                <constraint firstAttribute="trailing" secondItem="0PU-3s-7Cf" secondAttribute="trailing" constant="8" id="fMp-BZ-N9T"/>
                 <constraint firstAttribute="trailing" secondItem="HXH-SN-Onn" secondAttribute="trailing" id="fUm-qF-sjd"/>
-                <constraint firstItem="0PU-3s-7Cf" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" constant="8" id="hga-go-DLz"/>
                 <constraint firstItem="dag-Ge-QdE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mGN-rZ-ImE"/>
                 <constraint firstItem="vkF-jL-sRQ" firstAttribute="width" secondItem="zFY-QP-1de" secondAttribute="width" id="sC8-B9-Igr"/>
+                <constraint firstItem="vkF-jL-sRQ" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" constant="32" id="tFc-2S-YFE"/>
                 <constraint firstAttribute="trailing" secondItem="vkF-jL-sRQ" secondAttribute="trailing" constant="13" id="yy5-MV-i8o"/>
             </constraints>
             <point key="canvasLocation" x="529" y="401"/>

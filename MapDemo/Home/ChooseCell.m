@@ -36,7 +36,7 @@
     self.lbTitle.text=self.titleStr;
 }
 
-- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
-    
++ (CGFloat)heigthForCell{
+    return 41.0;
 }
 @end

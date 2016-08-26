@@ -12,16 +12,12 @@
 #import "JZLocationConverter.h"
 
 
-#define DefaultCoordinate CLLocationCoordinate2DMake(22.151408, 113.564488)
-
-@interface HomeViewController ()<MKMapViewDelegate,CLLocationManagerDelegate,CalloutViewClickDelegate>
+@interface HomeViewController ()<MKMapViewDelegate,CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapKitView;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *userLocation;
-@property (nonatomic, strong) NSMutableArray * annotions;
-@property (nonatomic, strong) NSMutableArray *dataList;
 
 @property (nonatomic, assign) int selectIndex;
 
@@ -47,12 +43,7 @@
         self.locationManager.delegate=nil;
         self.locationManager = nil;
     }
-    if(self.annotions){
-        [self.annotions removeAllObjects];
-        self.annotions=nil;
-    }
     self.userLocation=nil;
-    self.dataList=nil;
 }
 
 - (void)viewDidLoad {
@@ -87,7 +78,7 @@
     //初始化locationManger管理器对象
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
-    self.locationManager.distanceFilter = 10;//m
+    self.locationManager.distanceFilter = 1;//m
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 //    [self.locationManager startUpdatingLocation];
     if ([[[UIDevice currentDevice] systemVersion] doubleValue]>=8.0) {
@@ -100,50 +91,6 @@
         }
     }
 
-}
-
-- (void)setDataList:(NSMutableArray *)pdataList{
-    _dataList=pdataList;
-    double minLat = 360.0f, maxLat = -360.0f;
-    double minLon = 360.0f, maxLon = -360.0f;
-    self.annotions=[NSMutableArray array];
-    if (_dataList.count > 0) {
-        for (NSObject *obj in _dataList) {
-//            if ( obj.LATITUDE  < minLat ) minLat = obj.LATITUDE;
-//            if ( obj.LATITUDE  > maxLat ) maxLat = obj.LATITUDE;
-//            if ( obj.LONGITUDE < minLon ) minLon = obj.LONGITUDE;
-//            if ( obj.LONGITUDE > maxLon ) maxLon = obj.LONGITUDE;
-            CLLocationDegrees lat = 22.151408;
-            CLLocationDegrees lon = 113.564488;
-            CLLocationCoordinate2D coord=CLLocationCoordinate2DMake(lat,lon);
-            MPAnnotation *annotation= [[MPAnnotation alloc] init];
-            annotation.obj = obj;
-            annotation.coordinate=coord;
-            [self.annotions addObject:annotation];
-        }
-        
-        CLLocationDegrees latitudeDelta,longitudeDelta;
-        latitudeDelta = (maxLat - minLat)*1.8;
-        longitudeDelta =  (maxLon - minLon)*1.8;
-        if(_dataList.count==1){
-            latitudeDelta = 0.03;
-            longitudeDelta = 0.03;
-        }
-        if (latitudeDelta<0||latitudeDelta>180) {
-            latitudeDelta = 180;
-        }
-        if (longitudeDelta<0||longitudeDelta>360) {
-            longitudeDelta = 360;
-        }
-        [self.mapKitView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake((minLat+maxLat)/2.0, (minLon+maxLon)/2.0), MKCoordinateSpanMake(latitudeDelta, longitudeDelta)) animated:YES];
-    }
-    
-    [self addMPAnnotation];
-}
-
-- (void)addMPAnnotation{
-    [self removeMPAnnotation];
-    [self.mapKitView addAnnotations:self.annotions];
 }
 
 - (void)goToPosition:(CLLocationCoordinate2D)coordinate{
@@ -170,7 +117,7 @@
 
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
-    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"mapView定位",@"Manager定位",@"修正定位偏差",@"4",@"5", nil];
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"mapView定位",@"Manager定位",@"修正定位偏差", nil];
     ChooseView *rangeView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [rangeView seleceCell:self.selectIndex];
     [rangeView show:^(int selectIndex) {
@@ -202,7 +149,6 @@
             default:
                 break;
         }
-        [weakSelf locateAction:nil];
     }];
 }
 
@@ -210,13 +156,7 @@
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
     
-    if([annotation isKindOfClass:[MPAnnotation class]]){
-        MPCalloutAnnotationView *calloutView=[MPCalloutAnnotationView calloutViewWithMapView:mapView :@"MPAnnotationCalloutView"];
-        calloutView.annotation=annotation;
-        calloutView.image=[UIImage imageNamed:@"main_icon_Parking-Metre"];
-        calloutView.delegate=self;
-        return calloutView;
-    }else if([annotation isKindOfClass:[UMKAnnotation class]]){
+   if([annotation isKindOfClass:[UMKAnnotation class]]){
         
         static NSString *ID = @"UMKAnnotationCalloutView";
         MKAnnotationView *calloutView =
@@ -264,12 +204,6 @@
     }];
 }
 
-#pragma mark - CalloutViewClickDelegate
--(void)clickPinWithObj:(NSObject *)obj{
-    NSLog(@"点击: %@",obj);
-}
-
-
 #pragma mark - CoreLocation 代理
 #pragma mark -- 跟踪定位代理方法，每次位置发生变化即会执行（只要定位到相应位置）
 //可以通过模拟器设置一个虚拟位置，否则在模拟器中无法调用此方法
@@ -282,6 +216,7 @@
     if (self.isFixLocation) {
         //当使用模拟器定位在中国大陆以外地区，计算GCJ-02坐标还是返回WGS-84
         coordinate = [JZLocationConverter wgs84ToGcj02:coordinate];
+        NSLog(@"manager定位加偏 经度：%f,纬度：%f",coordinate.longitude,coordinate.latitude);
     }
     
     [self removeAllAnnotation];
@@ -293,7 +228,7 @@
     [self.mapKitView selectAnnotation:annotation animated:YES];
     [self goToPosition:coordinate];
     
-    self.userLocation = location;
+    self.userLocation = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
 }
 
 - (void)locationManager:(CLLocationManager *)manager

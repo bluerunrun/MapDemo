@@ -32,13 +32,13 @@
     
     Menu = [[clsMenu alloc] init];
     Menu.MenuID = MenuID_Home;
-    Menu.MenuName = @"主頁";
+    Menu.MenuName = @"用户位置跟踪";
     Menu.MenuIcon=@"icon_home";
     [list addObject:Menu];
     
     Menu = [[clsMenu alloc] init];
     Menu.MenuID = MenuID_Menu1;
-    Menu.MenuName = @"Menu1";
+    Menu.MenuName = @"CustomPin";
     Menu.MenuIcon=@"icon_search_medicine";
     [list addObject:Menu];
     

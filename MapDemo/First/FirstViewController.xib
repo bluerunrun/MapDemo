@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
             <connections>
+                <outlet property="mapKitView" destination="N4O-Vg-vvt" id="88g-oa-YPO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GO-32-aqu">
-                    <rect key="frame" x="143" y="274" width="34" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="El6-Kt-QRM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                     <subviews>
@@ -40,7 +35,7 @@
                                 <action selector="menuAction:" destination="-1" eventType="touchUpInside" id="rkq-0e-cJh"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-PO-Rsm">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CustomPin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-PO-Rsm">
                             <rect key="frame" x="46" y="27" width="228" height="22"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,19 +55,47 @@
                         <constraint firstAttribute="bottom" secondItem="XJl-jj-zhs" secondAttribute="bottom" id="xbc-I9-jTN"/>
                     </constraints>
                 </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N4O-Vg-vvt">
+                    <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="UNp-2z-XRZ"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laq-45-Qaz">
+                    <rect key="frame" x="267" y="134" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YB4-iT-9Ik"/>
+                        <constraint firstAttribute="width" constant="40" id="rc1-dW-aVJ"/>
+                    </constraints>
+                    <state key="normal" image="main_but_range"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-o7-h39">
+                    <rect key="frame" x="267" y="92" width="40" height="40"/>
+                    <state key="normal" image="main_but_location"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="N4O-Vg-vvt" firstAttribute="top" secondItem="El6-Kt-QRM" secondAttribute="bottom" id="HKL-U0-Zah"/>
+                <constraint firstItem="KBu-o7-h39" firstAttribute="width" secondItem="laq-45-Qaz" secondAttribute="width" id="HOE-Fd-Iba"/>
+                <constraint firstItem="KBu-o7-h39" firstAttribute="top" secondItem="El6-Kt-QRM" secondAttribute="bottom" constant="32" id="Jah-qb-Tyn"/>
+                <constraint firstItem="KBu-o7-h39" firstAttribute="height" secondItem="laq-45-Qaz" secondAttribute="height" id="LFB-lB-0Zd"/>
                 <constraint firstItem="El6-Kt-QRM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MB5-eI-P6b"/>
-                <constraint firstItem="8GO-32-aqu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XHe-dL-qRm"/>
+                <constraint firstItem="laq-45-Qaz" firstAttribute="centerX" secondItem="KBu-o7-h39" secondAttribute="centerX" id="V3L-EA-w0o"/>
                 <constraint firstItem="El6-Kt-QRM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZqW-5A-qhZ"/>
-                <constraint firstItem="8GO-32-aqu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rLY-mk-nMI"/>
+                <constraint firstItem="laq-45-Qaz" firstAttribute="top" secondItem="KBu-o7-h39" secondAttribute="bottom" constant="2" id="eLg-9H-rrz"/>
+                <constraint firstAttribute="trailing" secondItem="N4O-Vg-vvt" secondAttribute="trailing" id="gsu-9U-48o"/>
+                <constraint firstAttribute="bottom" secondItem="N4O-Vg-vvt" secondAttribute="bottom" id="hJJ-Td-mf2"/>
+                <constraint firstAttribute="trailing" secondItem="KBu-o7-h39" secondAttribute="trailing" constant="13" id="jqt-cq-2JL"/>
                 <constraint firstAttribute="trailing" secondItem="El6-Kt-QRM" secondAttribute="trailing" id="sBy-Q0-X7C"/>
+                <constraint firstItem="N4O-Vg-vvt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z3s-Zw-zxK"/>
             </constraints>
             <point key="canvasLocation" x="305" y="447"/>
         </view>
     </objects>
     <resources>
         <image name="ico_menu_normal" width="20" height="14"/>
+        <image name="main_but_location" width="35" height="35"/>
+        <image name="main_but_range" width="35" height="35"/>
     </resources>
 </document>

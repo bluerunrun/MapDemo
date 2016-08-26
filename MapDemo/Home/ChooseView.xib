@@ -27,6 +27,9 @@
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjK-Ij-pCJ">
                                     <rect key="frame" x="6" y="2" width="206" height="164"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="164" id="Nci-yE-SsW"/>
+                                    </constraints>
                                     <connections>
                                         <outlet property="dataSource" destination="iN0-l3-epB" id="NIc-SA-ens"/>
                                         <outlet property="delegate" destination="iN0-l3-epB" id="nYh-cg-Bbf"/>
@@ -38,7 +41,6 @@
                                 <constraint firstAttribute="bottom" secondItem="Sb1-Gp-pb2" secondAttribute="bottom" constant="8" id="1ep-fU-cwI"/>
                                 <constraint firstItem="Sb1-Gp-pb2" firstAttribute="top" secondItem="k0w-N1-bLs" secondAttribute="top" id="2yx-xd-Y9K"/>
                                 <constraint firstAttribute="trailing" secondItem="Sb1-Gp-pb2" secondAttribute="trailing" constant="4" id="31z-Xa-H2i"/>
-                                <constraint firstAttribute="height" constant="176" id="83V-DE-wwk"/>
                                 <constraint firstItem="fjK-Ij-pCJ" firstAttribute="leading" secondItem="k0w-N1-bLs" secondAttribute="leading" constant="6" id="BHE-dd-ves"/>
                                 <constraint firstItem="Sb1-Gp-pb2" firstAttribute="leading" secondItem="k0w-N1-bLs" secondAttribute="leading" constant="4" id="E9x-n4-FpB"/>
                                 <constraint firstAttribute="bottom" secondItem="fjK-Ij-pCJ" secondAttribute="bottom" constant="10" id="EVH-q3-GgL"/>
@@ -70,6 +72,7 @@
                 <outlet property="bgView" destination="w5B-8f-2Ln" id="05x-cS-W1x"/>
                 <outlet property="rangeTableView" destination="fjK-Ij-pCJ" id="Lif-ax-yGX"/>
                 <outlet property="rangeView" destination="k0w-N1-bLs" id="vjq-1j-Cy3"/>
+                <outlet property="tableHeight" destination="Nci-yE-SsW" id="MLH-tj-sJ8"/>
             </connections>
             <point key="canvasLocation" x="451" y="281"/>
         </view>

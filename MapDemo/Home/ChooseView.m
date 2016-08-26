@@ -16,21 +16,15 @@
 @property (weak, nonatomic) IBOutlet UITableView *rangeTableView;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 
-@property (strong, nonatomic) NSMutableArray *rangeList;
+@property (strong, nonatomic) NSMutableArray *dataList;
 
 @property (strong, nonatomic) PaymentCallBack compite;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeight;
 
 @end
 
 @implementation ChooseView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 - (instancetype)initWithFrame:(CGRect)frame AndDataList:(NSArray *)list{
     self=[super initWithFrame:frame];
@@ -42,7 +36,8 @@
     [self.bgView addGestureRecognizer:singal];
     self.rangeTableView.bounces=NO;
     self.rangeTableView.tableFooterView = [[UIView alloc] init];
-    self.rangeList = [NSMutableArray arrayWithArray:list];
+    self.dataList = [NSMutableArray arrayWithArray:list];
+    self.tableHeight.constant = [ChooseCell heigthForCell]*self.dataList.count;
     [self seleceCell:0];
     
     return self;
@@ -83,7 +78,7 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.dataList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -92,21 +87,21 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ChooseCell" owner:self options:nil] lastObject];
         [cell setSeparatorInset:UIEdgeInsetsZero];
         if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-            if(indexPath.row==3){
+            if(indexPath.row==self.dataList.count-1){
                 cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.size.width, 0, 0);
             }else{
                 [cell setLayoutMargins:UIEdgeInsetsZero];
             }
         }
     }
-    cell.titleStr=self.rangeList[indexPath.row];
+    cell.titleStr=self.dataList[indexPath.row];
     [cell loadData];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 41;
+    return [ChooseCell heigthForCell];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

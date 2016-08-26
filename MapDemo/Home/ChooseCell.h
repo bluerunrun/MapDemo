@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *titleStr;
 
 -(void)loadData;
++ (CGFloat)heigthForCell;
 
 @end

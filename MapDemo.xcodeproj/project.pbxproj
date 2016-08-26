@@ -66,6 +66,7 @@
 		77F01B46576FE717A9DF0B55 /* Pods-MapDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapDemoTests/Pods-MapDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A315CA11D7017F400747E2B /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
 		7A315CA21D7017F400747E2B /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
+		7A315CA41D702C4F00747E2B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7AD8AA0B1D6EEA2200F5B7E8 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8AA0F1D6EEA2200F5B7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 		7AD8AA0E1D6EEA2200F5B7E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7A315CA41D702C4F00747E2B /* PrefixHeader.pch */,
 				7AD8AA1A1D6EEA2200F5B7E8 /* Assets.xcassets */,
 				7AD8AA1F1D6EEA2200F5B7E8 /* Info.plist */,
 				7AD8AA0F1D6EEA2200F5B7E8 /* main.m */,
@@ -760,6 +762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = MapDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = MapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blue.MapDemo;
@@ -775,6 +778,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = MapDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = MapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blue.MapDemo;
