@@ -11,6 +11,12 @@
 		7A315CA31D7017F400747E2B /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA21D7017F400747E2B /* JZLocationConverter.m */; };
 		7A315CA71D702FBF00747E2B /* UMKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA61D702FBF00747E2B /* UMKAnnotation.m */; };
 		7A315CAA1D70307F00747E2B /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */; };
+		7A315CAD1D70313A00747E2B /* MDCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CAC1D70313A00747E2B /* MDCalloutAnnotationView.m */; };
+		7A315CB61D7043EB00747E2B /* angle-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A315CAF1D7043EB00747E2B /* angle-mask.png */; };
+		7A315CB71D7043EB00747E2B /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A315CB01D7043EB00747E2B /* angle-mask@2x.png */; };
+		7A315CB81D7043EB00747E2B /* angle-mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A315CB11D7043EB00747E2B /* angle-mask@3x.png */; };
+		7A315CB91D7043EB00747E2B /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CB31D7043EB00747E2B /* LoadingView.m */; };
+		7A315CBA1D7043EB00747E2B /* clsOtherFun.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CB51D7043EB00747E2B /* clsOtherFun.m */; };
 		7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA0F1D6EEA2200F5B7E8 /* main.m */; };
 		7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA121D6EEA2200F5B7E8 /* AppDelegate.m */; };
 		7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA151D6EEA2200F5B7E8 /* ViewController.m */; };
@@ -72,6 +78,15 @@
 		7A315CA61D702FBF00747E2B /* UMKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMKAnnotation.m; sourceTree = "<group>"; };
 		7A315CA81D70307F00747E2B /* MPCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCalloutAnnotationView.h; sourceTree = "<group>"; };
 		7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
+		7A315CAB1D70313A00747E2B /* MDCalloutAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCalloutAnnotationView.h; sourceTree = "<group>"; };
+		7A315CAC1D70313A00747E2B /* MDCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCalloutAnnotationView.m; sourceTree = "<group>"; };
+		7A315CAF1D7043EB00747E2B /* angle-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask.png"; sourceTree = "<group>"; };
+		7A315CB01D7043EB00747E2B /* angle-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@2x.png"; sourceTree = "<group>"; };
+		7A315CB11D7043EB00747E2B /* angle-mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@3x.png"; sourceTree = "<group>"; };
+		7A315CB21D7043EB00747E2B /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		7A315CB31D7043EB00747E2B /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		7A315CB41D7043EB00747E2B /* clsOtherFun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clsOtherFun.h; sourceTree = "<group>"; };
+		7A315CB51D7043EB00747E2B /* clsOtherFun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clsOtherFun.m; sourceTree = "<group>"; };
 		7AD8AA0B1D6EEA2200F5B7E8 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8AA0F1D6EEA2200F5B7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +186,9 @@
 		7A315C9C1D6FEFD400747E2B /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				7A315CB41D7043EB00747E2B /* clsOtherFun.h */,
+				7A315CB51D7043EB00747E2B /* clsOtherFun.m */,
+				7A315CAE1D7043EB00747E2B /* LoadingView */,
 				7A315CA01D7017F400747E2B /* JZLocationConverter */,
 			);
 			name = Class;
@@ -183,6 +201,18 @@
 				7A315CA21D7017F400747E2B /* JZLocationConverter.m */,
 			);
 			path = JZLocationConverter;
+			sourceTree = "<group>";
+		};
+		7A315CAE1D7043EB00747E2B /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				7A315CAF1D7043EB00747E2B /* angle-mask.png */,
+				7A315CB01D7043EB00747E2B /* angle-mask@2x.png */,
+				7A315CB11D7043EB00747E2B /* angle-mask@3x.png */,
+				7A315CB21D7043EB00747E2B /* LoadingView.h */,
+				7A315CB31D7043EB00747E2B /* LoadingView.m */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		7AD8AA021D6EEA2200F5B7E8 = {
@@ -290,6 +320,8 @@
 		7AD8AA6D1D6EECFE00F5B7E8 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				7A315CAB1D70313A00747E2B /* MDCalloutAnnotationView.h */,
+				7A315CAC1D70313A00747E2B /* MDCalloutAnnotationView.m */,
 				7A315CA81D70307F00747E2B /* MPCalloutAnnotationView.h */,
 				7A315CA91D70307F00747E2B /* MPCalloutAnnotationView.m */,
 				7AD8AA6E1D6EECFE00F5B7E8 /* FirstViewController.h */,
@@ -450,8 +482,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD8AA1E1D6EEA2200F5B7E8 /* LaunchScreen.storyboard in Resources */,
+				7A315CB71D7043EB00747E2B /* angle-mask@2x.png in Resources */,
+				7A315CB61D7043EB00747E2B /* angle-mask.png in Resources */,
 				7AD8AA8B1D6EF29F00F5B7E8 /* ChooseView.xib in Resources */,
 				7AD8AA5C1D6EEBC900F5B7E8 /* VersionViewController.xib in Resources */,
+				7A315CB81D7043EB00747E2B /* angle-mask@3x.png in Resources */,
 				7AD8AA1B1D6EEA2200F5B7E8 /* Assets.xcassets in Resources */,
 				7AD8AA5A1D6EEBC900F5B7E8 /* MenuViewController.xib in Resources */,
 				7AD8AA581D6EEBC900F5B7E8 /* MenuCell.xib in Resources */,
@@ -608,9 +643,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD8AA791D6EECFE00F5B7E8 /* FirstViewController.m in Sources */,
+				7A315CB91D7043EB00747E2B /* LoadingView.m in Sources */,
 				7AD8AA551D6EEBC900F5B7E8 /* GHRevealViewController.m in Sources */,
+				7A315CAD1D70313A00747E2B /* MDCalloutAnnotationView.m in Sources */,
 				7AD8AA5B1D6EEBC900F5B7E8 /* VersionViewController.m in Sources */,
 				7AD8AA881D6EF29F00F5B7E8 /* ChooseCell.m in Sources */,
+				7A315CBA1D7043EB00747E2B /* clsOtherFun.m in Sources */,
 				7AD8AA591D6EEBC900F5B7E8 /* MenuViewController.m in Sources */,
 				7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */,
 				7AD8AA571D6EEBC900F5B7E8 /* MenuCell.m in Sources */,
