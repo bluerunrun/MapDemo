@@ -19,7 +19,7 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0w-N1-bLs">
-                            <rect key="frame" x="56" y="108" width="224" height="176"/>
+                            <rect key="frame" x="56" y="120" width="224" height="176"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pop_map_position" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-Gp-pb2">
                                     <rect key="frame" x="4" y="0.0" width="216" height="168"/>
@@ -55,7 +55,7 @@
                         <constraint firstItem="w5B-8f-2Ln" firstAttribute="top" secondItem="qtF-NZ-V3W" secondAttribute="top" id="BF2-bg-wgA"/>
                         <constraint firstAttribute="bottom" secondItem="w5B-8f-2Ln" secondAttribute="bottom" id="BoM-9W-7GC"/>
                         <constraint firstAttribute="trailing" secondItem="k0w-N1-bLs" secondAttribute="trailing" constant="40" id="LOs-Ca-lPi"/>
-                        <constraint firstItem="k0w-N1-bLs" firstAttribute="top" secondItem="qtF-NZ-V3W" secondAttribute="top" constant="108" id="fGu-Jy-RIw"/>
+                        <constraint firstItem="k0w-N1-bLs" firstAttribute="top" secondItem="qtF-NZ-V3W" secondAttribute="top" constant="120" id="fGu-Jy-RIw"/>
                         <constraint firstItem="w5B-8f-2Ln" firstAttribute="leading" secondItem="qtF-NZ-V3W" secondAttribute="leading" id="fQd-O6-Zpu"/>
                         <constraint firstAttribute="trailing" secondItem="w5B-8f-2Ln" secondAttribute="trailing" id="ia5-4R-cfW"/>
                     </constraints>

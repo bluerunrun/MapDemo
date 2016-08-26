@@ -62,7 +62,7 @@
                     </connections>
                 </mapView>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-QP-1de">
-                    <rect key="frame" x="267" y="134" width="40" height="40"/>
+                    <rect key="frame" x="267" y="122" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="HtY-cq-Ae4"/>
                         <constraint firstAttribute="height" constant="40" id="k8T-cO-Xoj"/>
@@ -73,7 +73,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkF-jL-sRQ">
-                    <rect key="frame" x="267" y="92" width="40" height="40"/>
+                    <rect key="frame" x="267" y="80" width="40" height="40"/>
                     <state key="normal" image="main_but_location"/>
                     <connections>
                         <action selector="locateAction:" destination="-1" eventType="touchUpInside" id="PmG-XI-pho"/>
@@ -93,7 +93,7 @@
                 <constraint firstAttribute="trailing" secondItem="HXH-SN-Onn" secondAttribute="trailing" id="fUm-qF-sjd"/>
                 <constraint firstItem="dag-Ge-QdE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mGN-rZ-ImE"/>
                 <constraint firstItem="vkF-jL-sRQ" firstAttribute="width" secondItem="zFY-QP-1de" secondAttribute="width" id="sC8-B9-Igr"/>
-                <constraint firstItem="vkF-jL-sRQ" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" constant="32" id="tFc-2S-YFE"/>
+                <constraint firstItem="vkF-jL-sRQ" firstAttribute="top" secondItem="dag-Ge-QdE" secondAttribute="bottom" constant="20" id="tFc-2S-YFE"/>
                 <constraint firstAttribute="trailing" secondItem="vkF-jL-sRQ" secondAttribute="trailing" constant="13" id="yy5-MV-i8o"/>
             </constraints>
             <point key="canvasLocation" x="529" y="401"/>

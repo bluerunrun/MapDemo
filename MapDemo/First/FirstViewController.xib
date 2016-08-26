@@ -62,7 +62,7 @@
                     </connections>
                 </mapView>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laq-45-Qaz">
-                    <rect key="frame" x="267" y="134" width="40" height="40"/>
+                    <rect key="frame" x="267" y="122" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="YB4-iT-9Ik"/>
                         <constraint firstAttribute="width" constant="40" id="rc1-dW-aVJ"/>
@@ -73,7 +73,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-o7-h39">
-                    <rect key="frame" x="267" y="92" width="40" height="40"/>
+                    <rect key="frame" x="267" y="80" width="40" height="40"/>
                     <state key="normal" image="main_but_location"/>
                     <connections>
                         <action selector="locateAction:" destination="-1" eventType="touchUpInside" id="DMD-0t-swO"/>
@@ -84,7 +84,7 @@
             <constraints>
                 <constraint firstItem="N4O-Vg-vvt" firstAttribute="top" secondItem="El6-Kt-QRM" secondAttribute="bottom" id="HKL-U0-Zah"/>
                 <constraint firstItem="KBu-o7-h39" firstAttribute="width" secondItem="laq-45-Qaz" secondAttribute="width" id="HOE-Fd-Iba"/>
-                <constraint firstItem="KBu-o7-h39" firstAttribute="top" secondItem="El6-Kt-QRM" secondAttribute="bottom" constant="32" id="Jah-qb-Tyn"/>
+                <constraint firstItem="KBu-o7-h39" firstAttribute="top" secondItem="El6-Kt-QRM" secondAttribute="bottom" constant="20" id="Jah-qb-Tyn"/>
                 <constraint firstItem="KBu-o7-h39" firstAttribute="height" secondItem="laq-45-Qaz" secondAttribute="height" id="LFB-lB-0Zd"/>
                 <constraint firstItem="El6-Kt-QRM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MB5-eI-P6b"/>
                 <constraint firstItem="laq-45-Qaz" firstAttribute="centerX" secondItem="KBu-o7-h39" secondAttribute="centerX" id="V3L-EA-w0o"/>

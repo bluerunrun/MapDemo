@@ -78,7 +78,7 @@
     //初始化locationManger管理器对象
     self.locationManager = [[CLLocationManager alloc]init];
     self.locationManager.delegate = self;
-    self.locationManager.distanceFilter = 1;//m
+    self.locationManager.distanceFilter = 10;//m
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 //    [self.locationManager startUpdatingLocation];
     if ([[[UIDevice currentDevice] systemVersion] doubleValue]>=8.0) {
@@ -154,24 +154,24 @@
 
 #pragma mark -MKMapViewDelegate
 
-- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
-    
-   if([annotation isKindOfClass:[UMKAnnotation class]]){
-        
-        static NSString *ID = @"UMKAnnotationCalloutView";
-        MKAnnotationView *calloutView =
-        [mapView dequeueReusableAnnotationViewWithIdentifier:ID];
-        if (calloutView == nil) {
-            calloutView=[[MKAnnotationView alloc] initWithAnnotation:
-                      annotation reuseIdentifier:ID];
-            // 设置是否显示标题和子标题
-            calloutView.canShowCallout = YES;
-            calloutView.image = [UIImage imageNamed:@"main_icon_Parking-Metre"];
-        }
-        return calloutView;
-    }
-    return nil;
-}
+//- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
+//    
+//   if([annotation isKindOfClass:[UMKAnnotation class]]){
+//        
+//        static NSString *ID = @"UMKAnnotationCalloutView";
+//        MKAnnotationView *calloutView =
+//        [mapView dequeueReusableAnnotationViewWithIdentifier:ID];
+//        if (calloutView == nil) {
+//            calloutView=[[MKAnnotationView alloc] initWithAnnotation:
+//                      annotation reuseIdentifier:ID];
+//            // 设置是否显示标题和子标题
+//            calloutView.canShowCallout = YES;
+//            calloutView.image = [UIImage imageNamed:@"main_icon_Parking-Metre"];
+//        }
+//        return calloutView;
+//    }
+//    return nil;
+//}
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
     [self.mapKitView setCenterCoordinate:view.annotation.coordinate animated:YES];
