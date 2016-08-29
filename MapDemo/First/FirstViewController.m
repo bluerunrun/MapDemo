@@ -20,6 +20,8 @@
 
 @property (nonatomic, assign) int selectIndex;
 
+@property (nonatomic, assign) BOOL annotionAnimated;
+
 @end
 
 @implementation FirstViewController
@@ -46,6 +48,7 @@
     [self initMap];
     
     self.selectIndex = 0;
+    self.annotionAnimated = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -182,14 +185,15 @@
 
 - (IBAction)chooseAction:(id)sender {
     __weak __typeof(self)weakSelf = self;
-    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"同一模型",@"不同模型",@"下雨动画", nil];
+    NSMutableArray *list = [NSMutableArray arrayWithObjects:@"同一Pin",@"兩個Pin",@"动画加載Pin", nil];
     ChooseView *chooseView=[[ChooseView alloc] initWithFrame:self.view.bounds AndDataList:list];
     [chooseView seleceCell:self.selectIndex];
     [chooseView show:^(int selectIndex) {
         
-        [self removeAllAnnotation];
+        [weakSelf removeAllAnnotation];
         [clsOtherFun showLoadingView:@"Loading..."];
         weakSelf.selectIndex = selectIndex;
+        weakSelf.annotionAnimated = NO;
         [weakSelf performSelector:@selector(chooseViewFinish) withObject:nil afterDelay:1.0];
     }];
 }
@@ -209,7 +213,8 @@
             break;
         case 2:
         {
-            
+            self.annotionAnimated = YES;
+            [self addMPAnnotations];
         }
             break;
         default:
@@ -271,6 +276,32 @@
 #pragma mark -- 取消选中时触发
 -(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view{
     [self removeMDCalloutAnnotation];
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views{
+    
+    MKAnnotationView *annotationView;
+    for (annotationView in views){
+        if (!self.annotionAnimated) {
+            return;
+        }
+        if ([annotationView.annotation isKindOfClass:[MPAnnotation class]]){
+            
+            MPCalloutAnnotationView * dcannotationView=(MPCalloutAnnotationView *)annotationView;
+            CGRect endFrame = annotationView.frame;
+            int value = (arc4random() % 8) + 1;
+            annotationView.frame = CGRectMake(endFrame.origin.x, -200, endFrame.size.width, endFrame.size.height);
+            [UIView animateWithDuration:value/10.0 animations:^{
+                [annotationView setFrame:endFrame];
+            } completion:^(BOOL finished) {
+                CGRect imgFram=dcannotationView.frame;
+                dcannotationView.frame = CGRectMake(imgFram.origin.x, imgFram.origin.y, imgFram.size.width, imgFram.size.height*0.9);
+                [UIView animateWithDuration:0.2 animations:^{
+                    [dcannotationView setFrame:imgFram];
+                }];
+            }];
+        }
+    }
 }
 
 //当定位自身时调用
