@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  GeocoderViewController.h
 //  MenuDemo
 //
 //  Created by guopu on 22/6/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface GeocoderViewController : UITabBarController
 
 @end

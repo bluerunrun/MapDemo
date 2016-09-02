@@ -1,5 +1,5 @@
 //
-//  PushViewController.h
+//  CustomPinViewController.h
 //  MenuDemo
 //
 //  Created by guopu on 22/6/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PushViewController : UIViewController
+@interface CustomPinViewController : UIViewController
 
 @end

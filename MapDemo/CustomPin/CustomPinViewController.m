@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  CustomPinViewController.m
 //  MenuDemo
 //
 //  Created by guopu on 22/6/16.
 //  Copyright © 2016年 blue. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CustomPinViewController.h"
 #import "MPCalloutAnnotationView.h"
 #import "MDCalloutAnnotationView.h"
 #import "ChooseView.h"
 #import "clsOtherFun.h"
 
-@interface FirstViewController ()<MKMapViewDelegate,CLLocationManagerDelegate,CalloutViewClickDelegate>
+@interface CustomPinViewController ()<MKMapViewDelegate,CLLocationManagerDelegate,CalloutViewClickDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapKitView;
 @property (nonatomic, strong) CLLocation *userLocation;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation FirstViewController
+@implementation CustomPinViewController
 
 -(void)dealloc{
     if (self.mapKitView) {

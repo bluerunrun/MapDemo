@@ -42,6 +42,12 @@
     Menu.MenuIcon=@"icon_search_medicine";
     [list addObject:Menu];
     
+    Menu = [[clsMenu alloc] init];
+    Menu.MenuID = MenuID_Menu2;
+    Menu.MenuName = @"Geocoder";
+    Menu.MenuIcon=@"icon_search_medicine";
+    [list addObject:Menu];
+    
     return list;
 }
 
