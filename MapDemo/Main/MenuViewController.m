@@ -13,7 +13,8 @@
 #import "MainViewController.h"
 #import "HomeViewController.h"
 #import "CustomPinViewController.h"
-#import "GeocoderViewController.h"
+#import "GeocoderRootViewController.h"
+#import "CustomNavigationController.h"
 
 
 static NSString *identifier = @"MenuCell";
@@ -102,7 +103,10 @@ static NSString *identifier = @"MenuCell";
             rootVC=[[CustomPinViewController alloc] initWithNibName:@"CustomPinViewController" bundle:nil];
             break;
         case MenuID_Menu2:
-            rootVC=[[GeocoderViewController alloc] initWithNibName:@"GeocoderViewController" bundle:nil];
+        {
+            GeocoderRootViewController *vc = [[GeocoderRootViewController alloc] initWithNibName:@"GeocoderRootViewController" bundle:nil];
+            rootVC=vc;
+        }
             break;
 
         default:

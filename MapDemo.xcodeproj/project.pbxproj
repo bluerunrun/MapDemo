@@ -20,7 +20,14 @@
 		7A6DE22E1D790C8700145D57 /* MDCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2251D790C8700145D57 /* MDCalloutAnnotationView.m */; };
 		7A6DE22F1D790C8700145D57 /* MPCalloutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2271D790C8700145D57 /* MPCalloutAnnotationView.m */; };
 		7A6DE2301D790C8700145D57 /* GeocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE22A1D790C8700145D57 /* GeocoderViewController.m */; };
-		7A6DE2311D790C8700145D57 /* GeocoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DE22B1D790C8700145D57 /* GeocoderViewController.xib */; };
+		7A6DE2431D79810800145D57 /* ForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2421D79810800145D57 /* ForwardViewController.m */; };
+		7A6DE2461D79812000145D57 /* ReverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2451D79812000145D57 /* ReverseViewController.m */; };
+		7A6DE2491D79812800145D57 /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2481D79812800145D57 /* DistanceViewController.m */; };
+		7A6DE24F1D7981D600145D57 /* PlacemarksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE24C1D7981D600145D57 /* PlacemarksListViewController.m */; };
+		7A6DE2501D7981D600145D57 /* PlacemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE24E1D7981D600145D57 /* PlacemarkViewController.m */; };
+		7A6DE2541D79842B00145D57 /* GeocoderRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2521D79842B00145D57 /* GeocoderRootViewController.m */; };
+		7A6DE2551D79842B00145D57 /* GeocoderRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DE2531D79842B00145D57 /* GeocoderRootViewController.xib */; };
+		7A6DE25A1D79854900145D57 /* GeocoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DE2581D79854900145D57 /* GeocoderViewController.xib */; };
 		7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA0F1D6EEA2200F5B7E8 /* main.m */; };
 		7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA121D6EEA2200F5B7E8 /* AppDelegate.m */; };
 		7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8AA151D6EEA2200F5B7E8 /* ViewController.m */; };
@@ -92,7 +99,20 @@
 		7A6DE2271D790C8700145D57 /* MPCalloutAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCalloutAnnotationView.m; sourceTree = "<group>"; };
 		7A6DE2291D790C8700145D57 /* GeocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocoderViewController.h; sourceTree = "<group>"; };
 		7A6DE22A1D790C8700145D57 /* GeocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocoderViewController.m; sourceTree = "<group>"; };
-		7A6DE22B1D790C8700145D57 /* GeocoderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeocoderViewController.xib; sourceTree = "<group>"; };
+		7A6DE2411D79810800145D57 /* ForwardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardViewController.h; sourceTree = "<group>"; };
+		7A6DE2421D79810800145D57 /* ForwardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardViewController.m; sourceTree = "<group>"; };
+		7A6DE2441D79812000145D57 /* ReverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseViewController.h; sourceTree = "<group>"; };
+		7A6DE2451D79812000145D57 /* ReverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReverseViewController.m; sourceTree = "<group>"; };
+		7A6DE2471D79812800145D57 /* DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
+		7A6DE2481D79812800145D57 /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
+		7A6DE24B1D7981D600145D57 /* PlacemarksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacemarksListViewController.h; sourceTree = "<group>"; };
+		7A6DE24C1D7981D600145D57 /* PlacemarksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacemarksListViewController.m; sourceTree = "<group>"; };
+		7A6DE24D1D7981D600145D57 /* PlacemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacemarkViewController.h; sourceTree = "<group>"; };
+		7A6DE24E1D7981D600145D57 /* PlacemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacemarkViewController.m; sourceTree = "<group>"; };
+		7A6DE2511D79842B00145D57 /* GeocoderRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocoderRootViewController.h; sourceTree = "<group>"; };
+		7A6DE2521D79842B00145D57 /* GeocoderRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocoderRootViewController.m; sourceTree = "<group>"; };
+		7A6DE2531D79842B00145D57 /* GeocoderRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeocoderRootViewController.xib; sourceTree = "<group>"; };
+		7A6DE2581D79854900145D57 /* GeocoderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeocoderViewController.xib; sourceTree = "<group>"; };
 		7AD8AA0B1D6EEA2200F5B7E8 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8AA0F1D6EEA2200F5B7E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AD8AA111D6EEA2200F5B7E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,11 +254,56 @@
 		7A6DE2281D790C8700145D57 /* Geocoder */ = {
 			isa = PBXGroup;
 			children = (
+				7A6DE24A1D7981C800145D57 /* Share */,
+				7A6DE2401D7980FA00145D57 /* Distance */,
+				7A6DE23F1D7980E900145D57 /* Reverse Geocode */,
+				7A6DE23E1D7980DD00145D57 /* Forward Geocode */,
 				7A6DE2291D790C8700145D57 /* GeocoderViewController.h */,
 				7A6DE22A1D790C8700145D57 /* GeocoderViewController.m */,
-				7A6DE22B1D790C8700145D57 /* GeocoderViewController.xib */,
+				7A6DE2581D79854900145D57 /* GeocoderViewController.xib */,
+				7A6DE2511D79842B00145D57 /* GeocoderRootViewController.h */,
+				7A6DE2521D79842B00145D57 /* GeocoderRootViewController.m */,
+				7A6DE2531D79842B00145D57 /* GeocoderRootViewController.xib */,
 			);
 			path = Geocoder;
+			sourceTree = "<group>";
+		};
+		7A6DE23E1D7980DD00145D57 /* Forward Geocode */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DE2411D79810800145D57 /* ForwardViewController.h */,
+				7A6DE2421D79810800145D57 /* ForwardViewController.m */,
+			);
+			name = "Forward Geocode";
+			sourceTree = "<group>";
+		};
+		7A6DE23F1D7980E900145D57 /* Reverse Geocode */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DE2441D79812000145D57 /* ReverseViewController.h */,
+				7A6DE2451D79812000145D57 /* ReverseViewController.m */,
+			);
+			name = "Reverse Geocode";
+			sourceTree = "<group>";
+		};
+		7A6DE2401D7980FA00145D57 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DE2471D79812800145D57 /* DistanceViewController.h */,
+				7A6DE2481D79812800145D57 /* DistanceViewController.m */,
+			);
+			name = Distance;
+			sourceTree = "<group>";
+		};
+		7A6DE24A1D7981C800145D57 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DE24B1D7981D600145D57 /* PlacemarksListViewController.h */,
+				7A6DE24C1D7981D600145D57 /* PlacemarksListViewController.m */,
+				7A6DE24D1D7981D600145D57 /* PlacemarkViewController.h */,
+				7A6DE24E1D7981D600145D57 /* PlacemarkViewController.m */,
+			);
+			name = Share;
 			sourceTree = "<group>";
 		};
 		7AD8AA021D6EEA2200F5B7E8 = {
@@ -483,7 +548,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6DE2551D79842B00145D57 /* GeocoderRootViewController.xib in Resources */,
 				7AD8AA1E1D6EEA2200F5B7E8 /* LaunchScreen.storyboard in Resources */,
+				7A6DE25A1D79854900145D57 /* GeocoderViewController.xib in Resources */,
 				7A6DE21C1D790C1400145D57 /* angle-mask@2x.png in Resources */,
 				7A6DE21B1D790C1400145D57 /* angle-mask.png in Resources */,
 				7AD8AA8B1D6EF29F00F5B7E8 /* ChooseView.xib in Resources */,
@@ -491,7 +558,6 @@
 				7A6DE21D1D790C1400145D57 /* angle-mask@3x.png in Resources */,
 				7AD8AA1B1D6EEA2200F5B7E8 /* Assets.xcassets in Resources */,
 				7AD8AA5A1D6EEBC900F5B7E8 /* MenuViewController.xib in Resources */,
-				7A6DE2311D790C8700145D57 /* GeocoderViewController.xib in Resources */,
 				7AD8AA581D6EEBC900F5B7E8 /* MenuCell.xib in Resources */,
 				7A6DE22D1D790C8700145D57 /* CustomPinViewController.xib in Resources */,
 				7AD8AA191D6EEA2200F5B7E8 /* Main.storyboard in Resources */,
@@ -647,11 +713,14 @@
 				7A6DE21A1D790C1400145D57 /* JZLocationConverter.m in Sources */,
 				7A6DE21E1D790C1400145D57 /* LoadingView.m in Sources */,
 				7A6DE22E1D790C8700145D57 /* MDCalloutAnnotationView.m in Sources */,
+				7A6DE24F1D7981D600145D57 /* PlacemarksListViewController.m in Sources */,
 				7A6DE22F1D790C8700145D57 /* MPCalloutAnnotationView.m in Sources */,
 				7AD8AA551D6EEBC900F5B7E8 /* GHRevealViewController.m in Sources */,
+				7A6DE2491D79812800145D57 /* DistanceViewController.m in Sources */,
 				7A6DE22C1D790C8700145D57 /* CustomPinViewController.m in Sources */,
 				7AD8AA5B1D6EEBC900F5B7E8 /* VersionViewController.m in Sources */,
 				7A6DE21F1D790C1400145D57 /* clsOtherFun.m in Sources */,
+				7A6DE2431D79810800145D57 /* ForwardViewController.m in Sources */,
 				7AD8AA881D6EF29F00F5B7E8 /* ChooseCell.m in Sources */,
 				7AD8AA591D6EEBC900F5B7E8 /* MenuViewController.m in Sources */,
 				7AD8AA161D6EEA2200F5B7E8 /* ViewController.m in Sources */,
@@ -661,8 +730,11 @@
 				7AD8AA131D6EEA2200F5B7E8 /* AppDelegate.m in Sources */,
 				7AD8AA561D6EEBC900F5B7E8 /* MainViewController.m in Sources */,
 				7AD8AA101D6EEA2200F5B7E8 /* main.m in Sources */,
+				7A6DE2461D79812000145D57 /* ReverseViewController.m in Sources */,
+				7A6DE2541D79842B00145D57 /* GeocoderRootViewController.m in Sources */,
 				7A315CA71D702FBF00747E2B /* UMKAnnotation.m in Sources */,
 				7AD8AA531D6EEBC900F5B7E8 /* clsMenu.m in Sources */,
+				7A6DE2501D7981D600145D57 /* PlacemarkViewController.m in Sources */,
 				7AD8AA7B1D6EECFE00F5B7E8 /* HomeViewController.m in Sources */,
 				7A6DE2301D790C8700145D57 /* GeocoderViewController.m in Sources */,
 			);

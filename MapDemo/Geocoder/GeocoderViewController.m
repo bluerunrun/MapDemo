@@ -7,11 +7,11 @@
 //
 
 #import "GeocoderViewController.h"
+#import "ForwardViewController.h"
+#import "ReverseViewController.h"
+#import "DistanceViewController.h"
 
 @interface GeocoderViewController ()<UITabBarControllerDelegate>
-
-@property (assign,nonatomic) NSInteger currentIndex;
-@property (assign, nonatomic) NSInteger shouldSelectIndex;
 
 @end
 
@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self loadViewControllerData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,39 +32,23 @@
 
 #pragma mark -ResponseMethods
 
-- (IBAction)menuAction:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ShowMenu" object:nil];
-}
-
 #pragma mark -PrivateMethods
 
 -(void) loadViewControllerData{
     
     self.delegate=self;
-//    
-//    MissionViewController* MyTabBar1=[[MissionViewController alloc]initWithNibName:@"MissionViewController" bundle:nil];
-//    MyTabBar1.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"任務" image:ImageNamed(@"menu_icon_task_nor") selectedImage:ImageNamed(@"menu_icon_task_sel")];
-//    //[MyTabBar1.tabBarItem setImageInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-//    
-//    ActivitiesViewController* MyTabBar2=[[ActivitiesViewController alloc]initWithNibName:@"ActivitiesViewController" bundle:nil];
-//    MyTabBar2.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"活動" image:ImageNamed(@"menu_icon_activity_nor") selectedImage:ImageNamed(@"menu_icon_activity_sel")];
-//    //[MyTabBar2.tabBarItem setImageInsets:UIEdgeInsetsMake(6, 0, -6, 0)];
-//    
-//    AddMissionViewController* MyTabBar3=[[AddMissionViewController alloc]initWithNibName:@"AddMissionViewController" bundle:nil];
-//    MyTabBar3.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"" image:ImageNamed(@"menu_icon_release") selectedImage:ImageNamed(@"menu_icon_release")];
-//    [MyTabBar3.tabBarItem setImageInsets:UIEdgeInsetsMake(6, 0, -6, 0)];
-//    
-//    
-//    ComplaintCenterVC* MyTabBar4=[[ComplaintCenterVC alloc]initWithNibName:@"ComplaintCenterVC" bundle:nil];
-//    MyTabBar4.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"投訴" image:ImageNamed(@"menu_icon_Complaint_nor") selectedImage:ImageNamed(@"menu_icon_Complaint_sel")];
-//    //[MyTabBar4.tabBarItem setImageInsets:UIEdgeInsetsMake(6, 0, -6, 0)];
-//    
-//    PersonalViewController* MyTabBar5=[[PersonalViewController alloc]initWithNibName:@"PersonalViewController" bundle:nil];
-//    MyTabBar5.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"我的" image:ImageNamed(@"menu_icon_my_nor") selectedImage:ImageNamed(@"menu_icon_my_sel")];
-//    //[MyTabBar5.tabBarItem setImageInsets:UIEdgeInsetsMake(6, 0, -6, 0)];
-//    
-//    [self setViewControllers:@[MyTabBar1,MyTabBar2,MyTabBar3,MyTabBar4,MyTabBar5]];
-//    self.tabBar.tintColor=TabText;
+    
+    ForwardViewController* MyTabBar1=[[ForwardViewController alloc]initWithNibName:@"ForwardViewController" bundle:nil];
+    MyTabBar1.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"編碼" image:nil selectedImage:nil];
+    
+    ReverseViewController* MyTabBar2=[[ReverseViewController alloc] initWithNibName:@"ReverseViewController" bundle:nil];
+    MyTabBar2.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"反編碼" image:nil selectedImage:nil];
+    
+    DistanceViewController* MyTabBar3=[[DistanceViewController alloc]initWithNibName:@"DistanceViewController" bundle:nil];
+    MyTabBar3.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"距離" image:nil selectedImage:nil];
+   
+    [self setViewControllers:@[MyTabBar1,MyTabBar2,MyTabBar3]];
+    self.tabBar.tintColor=[UIColor blueColor];
 }
 
 #pragma mark -UITabBarControllerDelegate
