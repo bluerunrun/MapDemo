@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		744D96FAE4BB999C59565A41 /* libPods-MapDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB7F83ED7A248901C3A74C9 /* libPods-MapDemoTests.a */; };
 		7A315CA71D702FBF00747E2B /* UMKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A315CA61D702FBF00747E2B /* UMKAnnotation.m */; };
+		7A3D851C1D7D026300B1AABD /* ForwardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3D851B1D7D026300B1AABD /* ForwardViewController.xib */; };
+		7A3D851E1D7D028F00B1AABD /* ReverseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3D851D1D7D028F00B1AABD /* ReverseViewController.xib */; };
+		7A3D85201D7D029A00B1AABD /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3D851F1D7D029A00B1AABD /* DistanceViewController.xib */; };
 		7A6DE21A1D790C1400145D57 /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DE2111D790C1400145D57 /* JZLocationConverter.m */; };
 		7A6DE21B1D790C1400145D57 /* angle-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DE2131D790C1400145D57 /* angle-mask.png */; };
 		7A6DE21C1D790C1400145D57 /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DE2141D790C1400145D57 /* angle-mask@2x.png */; };
@@ -81,6 +84,9 @@
 		7A315CA41D702C4F00747E2B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7A315CA51D702FBF00747E2B /* UMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMKAnnotation.h; sourceTree = "<group>"; };
 		7A315CA61D702FBF00747E2B /* UMKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMKAnnotation.m; sourceTree = "<group>"; };
+		7A3D851B1D7D026300B1AABD /* ForwardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForwardViewController.xib; sourceTree = "<group>"; };
+		7A3D851D1D7D028F00B1AABD /* ReverseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReverseViewController.xib; sourceTree = "<group>"; };
+		7A3D851F1D7D029A00B1AABD /* DistanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
 		7A6DE2101D790C1400145D57 /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
 		7A6DE2111D790C1400145D57 /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
 		7A6DE2131D790C1400145D57 /* angle-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask.png"; sourceTree = "<group>"; };
@@ -273,6 +279,7 @@
 			children = (
 				7A6DE2411D79810800145D57 /* ForwardViewController.h */,
 				7A6DE2421D79810800145D57 /* ForwardViewController.m */,
+				7A3D851B1D7D026300B1AABD /* ForwardViewController.xib */,
 			);
 			name = "Forward Geocode";
 			sourceTree = "<group>";
@@ -282,6 +289,7 @@
 			children = (
 				7A6DE2441D79812000145D57 /* ReverseViewController.h */,
 				7A6DE2451D79812000145D57 /* ReverseViewController.m */,
+				7A3D851D1D7D028F00B1AABD /* ReverseViewController.xib */,
 			);
 			name = "Reverse Geocode";
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 			children = (
 				7A6DE2471D79812800145D57 /* DistanceViewController.h */,
 				7A6DE2481D79812800145D57 /* DistanceViewController.m */,
+				7A3D851F1D7D029A00B1AABD /* DistanceViewController.xib */,
 			);
 			name = Distance;
 			sourceTree = "<group>";
@@ -551,6 +560,7 @@
 				7A6DE2551D79842B00145D57 /* GeocoderRootViewController.xib in Resources */,
 				7AD8AA1E1D6EEA2200F5B7E8 /* LaunchScreen.storyboard in Resources */,
 				7A6DE25A1D79854900145D57 /* GeocoderViewController.xib in Resources */,
+				7A3D85201D7D029A00B1AABD /* DistanceViewController.xib in Resources */,
 				7A6DE21C1D790C1400145D57 /* angle-mask@2x.png in Resources */,
 				7A6DE21B1D790C1400145D57 /* angle-mask.png in Resources */,
 				7AD8AA8B1D6EF29F00F5B7E8 /* ChooseView.xib in Resources */,
@@ -561,7 +571,9 @@
 				7AD8AA581D6EEBC900F5B7E8 /* MenuCell.xib in Resources */,
 				7A6DE22D1D790C8700145D57 /* CustomPinViewController.xib in Resources */,
 				7AD8AA191D6EEA2200F5B7E8 /* Main.storyboard in Resources */,
+				7A3D851E1D7D028F00B1AABD /* ReverseViewController.xib in Resources */,
 				7AD8AA891D6EF29F00F5B7E8 /* ChooseCell.xib in Resources */,
+				7A3D851C1D7D026300B1AABD /* ForwardViewController.xib in Resources */,
 				7AD8AA7C1D6EECFE00F5B7E8 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
